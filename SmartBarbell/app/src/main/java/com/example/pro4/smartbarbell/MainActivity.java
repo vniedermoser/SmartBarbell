@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        button = (Button) findVievbyID(R.id.stats);
+        button = findVievbyID(R.id.stats);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -30,8 +30,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openStats(){
-        Intend intent = new Intent(this, Stats.class);
-        startActivity(intent);
+        startActivity(new Intent(MainActivity.this, Stats.class));
     }
 
 }
