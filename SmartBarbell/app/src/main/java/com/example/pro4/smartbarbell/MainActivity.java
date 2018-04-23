@@ -1,5 +1,6 @@
 package com.example.pro4.smartbarbell;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -29,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openStats(){
-        Intend intent = new Intend(this, Stats.class);
+        Intend intent = new Intent(this, Stats.class);
         startActivity(intent);
     }
 
