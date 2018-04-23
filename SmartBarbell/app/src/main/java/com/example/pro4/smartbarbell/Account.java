@@ -8,12 +8,12 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
-public class Stats extends Fragment {
+public class Account extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.stats, container, false);
+        return inflater.inflate(R.layout.account, container, false);
     }
 }
 
