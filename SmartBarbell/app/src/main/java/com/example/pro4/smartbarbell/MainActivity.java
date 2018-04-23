@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         button = (Button) findVievbyID(R.id.stats);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
-            //public void onClick(View v) {
+            public void onClick(View v) {
                 openStats();
             }
         });
