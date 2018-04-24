@@ -31,11 +31,9 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 
     implementation 'com.google.android.gms:play-services-drive:15.0.0'
-<<<<<<< HEAD
     implementation 'com.android.support:appcompat-v7:23.4.0'
     implementation 'com.android.support:cardview-v7:23.0.+'
     implementation 'com.android.support:recyclerview-v7:23.0.+'
-=======
->>>>>>> 83e146970e8900e69ba319af7129e37de2985c9b
+   //   83e146970e8900e69ba319af7129e37de2985c9b
     implementation 'com.google.android.gms:play-services-auth:15.0.0'
 }
