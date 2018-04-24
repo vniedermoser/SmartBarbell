@@ -4,6 +4,9 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="color_main">#E51545</color>
+    <!-- change color main -->
+    <!-- #1575E5 -->
+    <!-- #00C672 -->
     <color name="color_white">#FFFFFF</color>
     <color name="color_black">#000000</color>
     <color name="color_darkGrey">#2B2B2B</color>
