@@ -14,10 +14,6 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
 
-
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigation.setOnNavigationItemSelectedListener(navigationListener);
 
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new NFC()).commit();
-        }
+    }
 
 
     private BottomNavigationView.OnNavigationItemSelectedListener navigationListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -35,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             Fragment selectedFragment = null;
 
-            switch (item.getItemId()){
+            switch (item.getItemId()) {
                 case R.id.calender:
                     selectedFragment = new Calendar();
                     break;
@@ -51,19 +47,14 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.account:
                     selectedFragment = new Account();
                     break;
-        }
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
+            }
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
 
             return true;
-    }
-
-
-
-
+        }
 
 
     };
-
 
 
 }
