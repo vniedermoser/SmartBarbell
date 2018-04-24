@@ -3,6 +3,9 @@
     package="com.example.pro4.smartbarbell">
 
     <application
+		<meta-data 
+			android:name="com.example.pro4.smartbarbell"
+			android:value="190675105608" />
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
