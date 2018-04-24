@@ -1,11 +1,7 @@
 package com.example.pro4.smartbarbell;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.content.IntentSender;
-import android.support.annotation.NonNull;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -14,13 +10,9 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.api.Scope;
 import com.google.android.gms.drive.Drive;
 import com.google.android.gms.drive.DriveClient;
-import com.google.android.gms.drive.DriveFolder;
 import com.google.android.gms.drive.DriveId;
 import com.google.android.gms.drive.DriveResourceClient;
 import com.google.android.gms.drive.OpenFileActivityOptions;
-import com.google.android.gms.drive.query.Filters;
-import com.google.android.gms.drive.query.SearchableField;
-import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.Task;
 import com.google.android.gms.tasks.TaskCompletionSource;
 
@@ -78,8 +70,7 @@ public abstract class DriveActivity extends MainActivity {
                     return;
                 }
 
-                Task<GoogleSignInAccount> getAccountTask =
-                        GoogleSignIn.getSignedInAccountFromIntent(data);
+                Task<GoogleSignInAccount> getAccountTask = GoogleSignIn.getSignedInAccountFromIntent(data);
                 if (getAccountTask.isSuccessful()) {
                     initializeDriveClient(getAccountTask.getResult());
                 } else {
@@ -89,8 +80,7 @@ public abstract class DriveActivity extends MainActivity {
                 break;
             case REQUEST_CODE_OPEN_ITEM:
                 if (resultCode == RESULT_OK) {
-                    DriveId driveId = data.getParcelableExtra(
-                            OpenFileActivityOptions.EXTRA_RESPONSE_DRIVE_ID);
+                    DriveId driveId = data.getParcelableExtra(OpenFileActivityOptions.EXTRA_RESPONSE_DRIVE_ID);
                     mOpenItemTaskSource.setResult(driveId);
                 } else {
                     mOpenItemTaskSource.setException(new RuntimeException("Unable to open file"));
@@ -122,15 +112,13 @@ public abstract class DriveActivity extends MainActivity {
     }
 
     /**
-     * Continues the sign-in process, initializing the Drive clients with the current
-     * user's account.
+     * Continues the sign-in process, initializing the Drive clients with the current user's account.
      */
     private void initializeDriveClient(GoogleSignInAccount signInAccount) {
         mDriveClient = Drive.getDriveClient(getApplicationContext(), signInAccount);
         mDriveResourceClient = Drive.getDriveResourceClient(getApplicationContext(), signInAccount);
         onDriveClientReady();
     }
-
 
     /**
      * Called after the user has signed in and the Drive client has been initialized.

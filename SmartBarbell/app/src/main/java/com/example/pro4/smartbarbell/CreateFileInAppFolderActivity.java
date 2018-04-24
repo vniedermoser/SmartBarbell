@@ -42,9 +42,8 @@ class CreateFileInAppFolderActivity extends DriveActivity {
                         }
 
                         MetadataChangeSet changeSet = new MetadataChangeSet.Builder()
-                                .setTitle("New file")
+                                .setTitle("config")
                                 .setMimeType("text/plain")
-                                .setStarred(true)
                                 .build();
 
                         return getDriveResourceClient().createFile(parent, changeSet, contents);
