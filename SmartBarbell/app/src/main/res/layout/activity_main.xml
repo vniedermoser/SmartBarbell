@@ -23,9 +23,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-<<<<<<< HEAD
+
         app:menu="@menu/bottom_navigation" />
-=======
+
         android:background="@color/color_darkGrey"
         app:elevation="16dp"
         app:itemIconTint="@drawable/icon_color"
@@ -33,5 +33,4 @@
     />
 
 
->>>>>>> 0d4dd0175231b2b27abe9707e95c9ec6cb8eab3d
 </RelativeLayout>
