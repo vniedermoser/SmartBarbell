@@ -101,11 +101,10 @@ public abstract class DriveActivity extends MainActivity {
         if (signInAccount != null && signInAccount.getGrantedScopes().containsAll(requiredScopes)) {
             initializeDriveClient(signInAccount);
         } else {
-            GoogleSignInOptions signInOptions =
-                    new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                            .requestScopes(Drive.SCOPE_FILE)
-                            .requestScopes(Drive.SCOPE_APPFOLDER)
-                            .build();
+            GoogleSignInOptions signInOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                    .requestScopes(Drive.SCOPE_FILE)
+                    .requestScopes(Drive.SCOPE_APPFOLDER)
+                    .build();
             GoogleSignInClient googleSignInClient = GoogleSignIn.getClient(this, signInOptions);
             startActivityForResult(googleSignInClient.getSignInIntent(), REQUEST_CODE_SIGN_IN);
         }
@@ -125,6 +124,9 @@ public abstract class DriveActivity extends MainActivity {
      */
     protected abstract void onDriveClientReady();
 
+    /**
+     * ---
+     */
     protected DriveClient getDriveClient() {
         return mDriveClient;
     }
