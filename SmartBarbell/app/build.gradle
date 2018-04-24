@@ -5,7 +5,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.pro4.smartbarbell"
-        minSdkVersion 14
+        minSdkVersion 19
         targetSdkVersion 27
         versionCode 1
         versionName "1.0"
@@ -31,8 +31,11 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 
     implementation 'com.google.android.gms:play-services-drive:15.0.0'
+<<<<<<< HEAD
     implementation 'com.android.support:appcompat-v7:23.4.0'
     implementation 'com.android.support:cardview-v7:23.0.+'
     implementation 'com.android.support:recyclerview-v7:23.0.+'
+=======
+>>>>>>> 0d4dd0175231b2b27abe9707e95c9ec6cb8eab3d
     implementation 'com.google.android.gms:play-services-auth:15.0.0'
 }

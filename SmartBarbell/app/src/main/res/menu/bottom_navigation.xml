@@ -4,30 +4,40 @@
 
     <item
         android:id="@+id/calender"
+<<<<<<< HEAD
         android:icon="@drawable/calender"
         android:title="" />
+=======
+        android:icon="@drawable/ic_calendar"
+        android:title=""
+        />
+>>>>>>> 0d4dd0175231b2b27abe9707e95c9ec6cb8eab3d
 
     <item
         android:id="@+id/workout"
-        android:icon="@drawable/workout"
+        android:icon="@drawable/ic_workout"
         android:title=""
         />
 
     <item
         android:id="@+id/nfc"
-        android:icon="@drawable/nfc"
+        android:icon="@drawable/ic_nfc"
         android:title=""
         />
 
     <item
         android:id="@+id/stats"
-        android:icon="@drawable/stats"
+        android:icon="@drawable/ic_stats"
         android:title=""
         />
 
     <item
         android:id="@+id/account"
-        android:icon="@drawable/account"
+        android:icon="@drawable/ic_account"
         android:title=""
         />
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0d4dd0175231b2b27abe9707e95c9ec6cb8eab3d
 </menu>
