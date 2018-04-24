@@ -2,6 +2,7 @@ package com.example.pro4.smartbarbell;
 
 import android.content.Intent;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -118,6 +119,14 @@ public abstract class DriveActivity extends MainActivity {
         mDriveResourceClient = Drive.getDriveResourceClient(getApplicationContext(), signInAccount);
         onDriveClientReady();
     }
+
+    /**
+     * Shows a toast message.
+     */
+    protected void showMessage(String message) {
+        Toast.makeText(this, message, Toast.LENGTH_LONG).show();
+    }
+
 
     /**
      * Called after the user has signed in and the Drive client has been initialized.

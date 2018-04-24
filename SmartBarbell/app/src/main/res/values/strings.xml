@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">SmartBarbell</string>
+    <string name="file_created">File Created</string>
+    <string name="file_create_error">File Creation Error</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
