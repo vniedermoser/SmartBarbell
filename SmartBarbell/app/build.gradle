@@ -2,6 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 27
+
     defaultConfig {
         applicationId "com.example.pro4.smartbarbell"
         minSdkVersion 14
@@ -30,4 +31,5 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 
     implementation 'com.google.android.gms:play-services-drive:15.0.0'
+    implementation 'com.google.android.gms:play-services-auth:15.0.0'
 }
