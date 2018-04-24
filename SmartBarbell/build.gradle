@@ -19,9 +19,10 @@ allprojects {
     repositories {
         google()
         jcenter()
-        maven {
-            url "https://maven.google.com"
-        }
+        // from Gradle ver 4.1 on google() does the same as maven {}
+//        maven {
+//            url "https://maven.google.com"
+//        }
     }
 }
 
