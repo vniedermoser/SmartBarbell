@@ -10,12 +10,9 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-<<<<<<< HEAD
 import com.google.android.gms.auth.api.signin.GoogleSignInApi;
 import com.google.android.gms.common.api.GoogleApiClient;
 
-=======
->>>>>>> parent of d11c9b2... Merge branch 'master' of https://github.com/vniedermoser/SmartBarbell
 
 public class MainActivity extends AppCompatActivity {
 
@@ -124,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
     // -------------------
     // end basic structure
     // -------------------
-<<<<<<< HEAD
+
 /*
 =======
 
@@ -159,8 +156,4 @@ public class MainActivity extends AppCompatActivity {
 <<<<<<< HEAD
     };
 */
-=======
-    };*/
-
->>>>>>> parent of d11c9b2... Merge branch 'master' of https://github.com/vniedermoser/SmartBarbell
 }
