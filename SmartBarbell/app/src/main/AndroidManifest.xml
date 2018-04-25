@@ -32,8 +32,9 @@
         <activity
             android:name=".WorkoutActivity"
             android:label="@string/title_activity_workout" />
-        <activity android:name=".ExerciseActivity"></activity>
-        <activity android:name=".ExerciseListActivity"></activity>
+        <activity android:name=".ExerciseActivity" />
+        <activity android:name=".ExerciseListActivity" />
+        <activity android:name=".TimerActivity"></activity>
     </application>
 
 </manifest>
