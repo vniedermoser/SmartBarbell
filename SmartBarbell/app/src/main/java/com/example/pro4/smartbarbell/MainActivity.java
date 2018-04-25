@@ -15,6 +15,8 @@ public class MainActivity extends AppCompatActivity {
     // start basic structure
     // ---------------------
 
+    // see here for ref https://stackoverflow.com/questions/6812003/difference-between-oncreate-and-onstart
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
