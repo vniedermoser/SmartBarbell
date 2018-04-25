@@ -1,6 +1,5 @@
 package com.example.pro4.smartbarbell;
 
-import android.content.Context;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
@@ -18,7 +17,7 @@ import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
 
-class CreateFileInAppFolderActivity extends LoginActivity {
+class CreateFileInAppFolderActivity extends DriveActivity {
 
     private static final String TAG = "CreateFileInAppFolder";
 
