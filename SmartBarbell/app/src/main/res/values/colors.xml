@@ -9,9 +9,4 @@
     <color name="color_darkGrey">#2B2B2B</color>
     <color name="color_midGrey">#575656</color>
     <color name="color_lightGrey">#868686</color>
-
-    <!--Android Colors-->
-    <color name="colorPrimary">#575656</color>
-    <color name="colorPrimaryDark">#2B2B2B</color>
-    <color name="colorAccent">#E51545</color>
 </resources>
