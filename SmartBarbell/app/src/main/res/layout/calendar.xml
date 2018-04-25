@@ -27,7 +27,7 @@
         android:layout_marginTop="32dp"
         android:background="@color/color_main"
         android:padding="8dp"
-        android:text="Mon"
+        android:text="@string/mon"
         android:textAlignment="center"
         android:textColor="@color/color_white"
         app:layout_constraintStart_toStartOf="parent"
