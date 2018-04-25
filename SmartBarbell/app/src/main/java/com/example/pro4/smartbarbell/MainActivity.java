@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
+
     private static final String TAG = "MainActivity";
 
     // ---------------------
