@@ -41,7 +41,7 @@ public class WorkoutActivity extends Fragment {
 
         workoutList.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if(position >= 0){
+                if(position >= 0) {
                     Toast.makeText(getActivity(), "go to exercise", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(getActivity(), ExerciseListActivity.class);
                     startActivity(intent);
