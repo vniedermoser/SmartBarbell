@@ -121,43 +121,7 @@ public class MainActivity extends AppCompatActivity {
     // end basic structure
     // -------------------
 
-<<<<<<< HEAD
-    /*
-=======
-/*
-=======
-
-    /*
->>>>>>> parent of d11c9b2... Merge branch 'master' of https://github.com/vniedermoser/SmartBarbell
->>>>>>> parent of d0b1a3e... Revert "Merge branch 'master' of https://github.com/vniedermoser/SmartBarbell"
-    private BottomNavigationView.OnNavigationItemSelectedListener navigationListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            Fragment selectedFragment = null;
-
-            switch (item.getItemId()) {
-                case R.id.calender:
-                    selectedFragment = new CalendarActivity();
-                    break;
-                case R.id.workout:
-                    selectedFragment = new WorkoutActivity();
-                    break;
-                case R.id.nfc:
-                    selectedFragment = new NFCActivity();
-                    break;
-                case R.id.stats:
-                    selectedFragment = new StatsActivity();
-                    break;
-                case R.id.account:
-                    selectedFragment = new AccountActivity();
-                    break;
-            }
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
-
-            return true;
-        }
-<<<<<<< HEAD
     };
-*/
 
-}
+
+
