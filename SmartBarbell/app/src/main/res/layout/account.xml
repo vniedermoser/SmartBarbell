@@ -6,14 +6,11 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-<<<<<<< HEAD
         android:layout_centerInParent="true"
         android:text="Account"
         android:textSize="30sp" />
-=======
         android:text="Account"
         android:textSize="30sp"
         android:layout_centerInParent="true"/>
->>>>>>> ba59b8dd744b60a58c66115eb004d5f6761f096a
 
 </RelativeLayout>
