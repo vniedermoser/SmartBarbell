@@ -21,7 +21,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public abstract class DriveActivity extends MainActivity {
-    private static final String TAG = "BaseDriveActivity";
+    private static final String TAG = "DriveActivity";
 
     /**
      * Request code for google sign-in
@@ -51,7 +51,7 @@ public abstract class DriveActivity extends MainActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        Log.d("onStart", "visited");
+        Log.d(TAG, "visited");
         signIn();
     }
 
