@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <<<<<<< HEAD
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-=======
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
->>>>>>> 34833cb7b6f014c974e985a264ab4b086d19fc10
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
     android:layout_width="match_parent"
