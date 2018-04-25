@@ -18,14 +18,18 @@ import java.util.ArrayList;
 public class TimerActivity extends AppCompatActivity {
 
     TextView textView ;
-    Button start, pause, reset, lap ;
+    Button start, pause, reset;
+    //Button lap;
     long MillisecondTime, StartTime, TimeBuff, UpdateTime = 0L ;
     Handler handler;
     int Seconds, Minutes, MilliSeconds ;
+
+    /*
     ListView listView ;
     String[] ListElements = new String[] {  };
     List<String> ListElementsArrayList ;
     ArrayAdapter<String> adapter ;
+    */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,11 +40,11 @@ public class TimerActivity extends AppCompatActivity {
         start = (Button)findViewById(R.id.btnStart);
         pause = (Button)findViewById(R.id.btnPause);
         reset = (Button)findViewById(R.id.btnReset);
-        lap = (Button)findViewById(R.id.btnLap) ;
-        listView = (ListView)findViewById(R.id.listview1);
-
         handler = new Handler() ;
 
+        /*
+        lap = (Button)findViewById(R.id.btnLap) ;
+        listView = (ListView)findViewById(R.id.listview1);
         ListElementsArrayList = new ArrayList<String>(Arrays.asList(ListElements));
 
         adapter = new ArrayAdapter<String>(TimerActivity.this,
@@ -49,7 +53,7 @@ public class TimerActivity extends AppCompatActivity {
         );
 
         listView.setAdapter(adapter);
-
+*/
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -61,6 +65,7 @@ public class TimerActivity extends AppCompatActivity {
 
             }
         });
+
 
         pause.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -94,7 +99,7 @@ public class TimerActivity extends AppCompatActivity {
             }
         });
 
-        /*
+/*
         lap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -105,7 +110,8 @@ public class TimerActivity extends AppCompatActivity {
 
             }
         });
-        */
+
+*/
 
     }
 
