@@ -24,8 +24,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Log.i(TAG, "On Create .....");
         // ---
+        /*
         BottomNavigationView bottomNavigation = findViewById(R.id.bottom_navigation);
         bottomNavigation.setOnNavigationItemSelectedListener(navigationListener);
+        */
 
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new NFCActivity()).commit();
     }
@@ -94,6 +96,7 @@ public class MainActivity extends AppCompatActivity {
     // end basic structure
     // -------------------
 
+    /*
     private BottomNavigationView.OnNavigationItemSelectedListener navigationListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -120,6 +123,6 @@ public class MainActivity extends AppCompatActivity {
 
             return true;
         }
-    };
+    };*/
 
 }

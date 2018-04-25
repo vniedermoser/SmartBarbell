@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+=======
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+>>>>>>> 34833cb7b6f014c974e985a264ab4b086d19fc10
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
     android:layout_width="match_parent"
@@ -9,6 +13,9 @@
     android:backgroundTint="@color/color_darkGrey"
     android:backgroundTintMode="multiply"
     android:visibility="visible"
+
+
+
     tools:context=".MainActivity">
 
     <FrameLayout
@@ -16,6 +23,64 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
+    <LinearLayout
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_darkGrey"
+        >
+
+        <ImageButton
+            android:backgroundTint="@color/color_darkGrey"
+            android:tint="@color/color_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_calendar"
+            />
+
+        <ImageButton
+            android:backgroundTint="@color/color_darkGrey"
+            android:tint="@color/color_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_workout"
+        />
+
+        <ImageButton
+            android:backgroundTint="@color/color_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_nfc"/>
+
+        <ImageButton
+            android:backgroundTint="@color/color_darkGrey"
+            android:tint="@color/color_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_stats"/>
+
+        <ImageButton
+            android:backgroundTint="@color/color_darkGrey"
+            android:tint="@color/color_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_account"/>
+
+    </LinearLayout>
+
+
+
+    <!--
+
+    Ehemalige Bottom Bar
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/bottom_navigation"
@@ -26,6 +91,7 @@
         app:itemIconTint="@drawable/icon_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/bottom_navigation" />
+<<<<<<< HEAD
 
     <Button
         android:id="@+id/ResultListActivity"
@@ -51,3 +117,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
+=======
+-->
+</RelativeLayout>
+>>>>>>> 34833cb7b6f014c974e985a264ab4b086d19fc10
