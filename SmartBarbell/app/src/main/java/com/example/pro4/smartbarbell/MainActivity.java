@@ -5,6 +5,7 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
@@ -15,10 +16,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Log.d("onCreate", "visited");
+
         BottomNavigationView bottomNavigation = findViewById(R.id.bottom_navigation);
         bottomNavigation.setOnNavigationItemSelectedListener(navigationListener);
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new NFC()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new NFCActivity()).commit();
     }
 
 
@@ -29,19 +32,19 @@ public class MainActivity extends AppCompatActivity {
 
             switch (item.getItemId()) {
                 case R.id.calender:
-                    selectedFragment = new Calendar();
+                    selectedFragment = new CalendarActivity();
                     break;
                 case R.id.workout:
-                    selectedFragment = new Workout();
+                    selectedFragment = new WorkoutActivity();
                     break;
                 case R.id.nfc:
-                    selectedFragment = new NFC();
+                    selectedFragment = new NFCActivity();
                     break;
                 case R.id.stats:
-                    selectedFragment = new Stats();
+                    selectedFragment = new StatsActivity();
                     break;
                 case R.id.account:
-                    selectedFragment = new Account();
+                    selectedFragment = new AccountActivity();
                     break;
             }
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
@@ -49,6 +52,5 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
     };
-
 
 }
