@@ -32,7 +32,11 @@
         <activity
             android:name=".WorkoutActivity"
             android:label="@string/title_activity_workout" />
+<<<<<<< HEAD
         <activity android:name=".ExerciseActivity"></activity>
+=======
+        <activity android:name=".ExerciseListActivity"></activity>
+>>>>>>> d33f2a36ae4cce36411cd87a536a94298b6673b0
     </application>
 
 </manifest>
