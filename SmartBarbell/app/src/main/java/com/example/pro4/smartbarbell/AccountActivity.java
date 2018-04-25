@@ -8,12 +8,12 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
-public class NFC extends Fragment {
+public class AccountActivity extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.nfc, container, false);
+        return inflater.inflate(R.layout.account, container, false);
     }
 }
 

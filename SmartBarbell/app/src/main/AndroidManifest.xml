@@ -22,13 +22,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Stats" />
+        <activity android:name=".StatsActivity" />
         <activity
-            android:name=".Calendar"
+            android:name=".CalendarActivity"
             android:label="@string/title_activity_calender"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Workout"
+            android:name=".WorkoutActivity"
             android:label="@string/title_activity_workout"></activity>
     </application>
 

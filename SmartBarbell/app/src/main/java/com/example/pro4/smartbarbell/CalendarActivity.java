@@ -8,12 +8,12 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
-public class Account extends Fragment {
+public class CalendarActivity extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.account, container, false);
+        return inflater.inflate(R.layout.calendar, container, false);
     }
 }
 

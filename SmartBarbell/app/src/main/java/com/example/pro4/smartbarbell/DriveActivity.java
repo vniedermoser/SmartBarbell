@@ -51,6 +51,7 @@ public abstract class DriveActivity extends MainActivity {
     @Override
     protected void onStart() {
         super.onStart();
+        Log.d("onStart", "visited");
         signIn();
     }
 

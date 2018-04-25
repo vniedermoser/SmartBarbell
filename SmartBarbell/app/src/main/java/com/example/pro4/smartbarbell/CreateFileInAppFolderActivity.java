@@ -24,6 +24,7 @@ class CreateFileInAppFolderActivity extends DriveActivity {
     @Override
     protected void onDriveClientReady() {
         createFileInAppFolder();
+        Log.d("onDriveClientReady", "here");
     }
 
     // [START create_file_in_appfolder]
@@ -39,6 +40,7 @@ class CreateFileInAppFolderActivity extends DriveActivity {
                         OutputStream outputStream = contents.getOutputStream();
                         try (Writer writer = new OutputStreamWriter(outputStream)) {
                             writer.write("Hello World!");
+                            Log.d("create_file_in_app_f","I work");
                         }
 
                         MetadataChangeSet changeSet = new MetadataChangeSet.Builder()

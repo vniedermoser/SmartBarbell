@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
-public class Workout extends Fragment {
+public class WorkoutActivity extends Fragment {
 
 
     @Nullable
