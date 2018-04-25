@@ -1,13 +1,21 @@
 <resources>
     <string name="app_name">Smart Barbell</string>
-    <string name="file_created">File Created</string>
-    <string name="file_create_error">File Creation Error</string>
+    <string name="file_created">File created</string>
+    <string name="file_create_error">File creation error</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
-    <string name="title_activity_calender">Calender</string>
+    <string name="title_activity_calendar">Calendar</string>
     <string name="title_activity_workout">Workout</string>
+    <string name="title_activity_login">Sign in</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- Days of the week -->
+    <string name="mon">MON</string>
+    <string name="tue">TUE</string>
+    <string name="wed">WED</string>
+    <string name="thu">THU</string>
+    <string name="fri">FRI</string>
+    <string name="sat">SAT</string>
+    <string name="sun">SUN</string>
+
 </resources>

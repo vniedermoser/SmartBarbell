@@ -18,6 +18,9 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
 
+    protected String name;
+    protected String profile_pic_url;
+
     // ---------------------
     // start basic structure
     // ---------------------
@@ -50,12 +53,11 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // ---
-        /*
-        BottomNavigationView bottomNavigation = findViewById(R.id.bottom_navigation);
-        bottomNavigation.setOnNavigationItemSelectedListener(navigationListener);
-        */
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new NFCActivity()).commit();
+//        BottomNavigationView bottomNavigation = findViewById(R.id.bottom_navigation);
+//        bottomNavigation.setOnNavigationItemSelectedListener(navigationListener);
+//
+//        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new NFCActivity()).commit();
     }
 
     /* (non-Javadoc)
@@ -121,19 +123,14 @@ public class MainActivity extends AppCompatActivity {
     // -------------------
     // end basic structure
     // -------------------
-
 /*
-=======
-
-    /*
->>>>>>> parent of d11c9b2... Merge branch 'master' of https://github.com/vniedermoser/SmartBarbell
     private BottomNavigationView.OnNavigationItemSelectedListener navigationListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             Fragment selectedFragment = null;
 
             switch (item.getItemId()) {
-                case R.id.calender:
+                case R.id.calendar:
                     selectedFragment = new CalendarActivity();
                     break;
                 case R.id.workout:
@@ -153,7 +150,6 @@ public class MainActivity extends AppCompatActivity {
 
             return true;
         }
-<<<<<<< HEAD
     };
 */
 }
