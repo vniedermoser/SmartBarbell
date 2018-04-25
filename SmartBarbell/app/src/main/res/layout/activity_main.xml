@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<<<<<<< HEAD
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+=======
     xmlns:app="http://schemas.android.com/apk/res-auto"
+>>>>>>> bd3a75d0408f676b65e66f4096e039a305a86c67
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
