@@ -18,9 +18,6 @@ public class Workout extends Fragment {
 
         View view = inflater.inflate(R.layout.workout, container, false);
 
-
-
-
         return view;
 
 
