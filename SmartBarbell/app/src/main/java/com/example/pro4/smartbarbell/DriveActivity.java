@@ -1,6 +1,5 @@
 package com.example.pro4.smartbarbell;
 
-import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 import android.widget.Toast;
@@ -50,16 +49,12 @@ public abstract class DriveActivity extends MainActivity {
      */
     private TaskCompletionSource<DriveId> mOpenItemTaskSource;
 
-    // variable to hold context
-    protected Context context;
-
     // ----------------------------------
 
     @Override
     protected void onStart() {
         super.onStart();
         Log.i(TAG, "On Start");
-        // ---
         signIn();
     }
 
@@ -79,6 +74,7 @@ public abstract class DriveActivity extends MainActivity {
                     finish();
                     return;
                 }
+
                 Task<GoogleSignInAccount> getAccountTask = GoogleSignIn.getSignedInAccountFromIntent(data);
                 if (getAccountTask.isSuccessful()) {
                     initializeDriveClient(getAccountTask.getResult());
@@ -106,9 +102,7 @@ public abstract class DriveActivity extends MainActivity {
         Set<Scope> requiredScopes = new HashSet<>(2);
         requiredScopes.add(Drive.SCOPE_FILE);
         requiredScopes.add(Drive.SCOPE_APPFOLDER);
-
-        GoogleSignInAccount signInAccount = GoogleSignIn.getLastSignedInAccount(context);
-
+        GoogleSignInAccount signInAccount = GoogleSignIn.getLastSignedInAccount(this);
         if (signInAccount != null && signInAccount.getGrantedScopes().containsAll(requiredScopes)) {
             initializeDriveClient(signInAccount);
         } else {
@@ -116,8 +110,7 @@ public abstract class DriveActivity extends MainActivity {
                     .requestScopes(Drive.SCOPE_FILE)
                     .requestScopes(Drive.SCOPE_APPFOLDER)
                     .build();
-
-            GoogleSignInClient googleSignInClient = GoogleSignIn.getClient(context, signInOptions);
+            GoogleSignInClient googleSignInClient = GoogleSignIn.getClient(this, signInOptions);
             startActivityForResult(googleSignInClient.getSignInIntent(), REQUEST_CODE_SIGN_IN);
         }
     }
@@ -142,7 +135,7 @@ public abstract class DriveActivity extends MainActivity {
     /**
      * Called after the user has signed in and the Drive client has been initialized.
      */
-    protected abstract void onDriveClientReady();
+    protected void onDriveClientReady() {}
 
     /**
      * ---
