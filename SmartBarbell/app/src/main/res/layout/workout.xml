@@ -5,7 +5,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent" >
     <Button
-        android:id="@+id/addBtn"
+        android:id="@+id/addButton"
         android:text="Add Workout"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -13,9 +13,11 @@
 
 
     <ListView
-        android:id="@android:id/list"
+        android:id="@+id/listOfWorkouts"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:drawSelectorOnTop="false"
-        android:scrollbars="vertical" />
+        android:background="@color/color_lightGrey"
+        android:scrollbars="vertical"
+        />
 </LinearLayout>

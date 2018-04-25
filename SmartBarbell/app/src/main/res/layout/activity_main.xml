@@ -15,12 +15,8 @@
         android:id="@+id/fragment_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-<<<<<<< HEAD
-       />// android:layout_above="@id/bottom_navigation" />
-=======
         android:layout_alignTop="@id/fragment_container"
         />
->>>>>>> 4bc02c59d2e0290a6dba47d9bde4167c16896bc0
 
 
     <android.support.design.widget.BottomNavigationView
