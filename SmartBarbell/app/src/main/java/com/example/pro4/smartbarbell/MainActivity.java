@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,6 +24,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Log.i(TAG, "On Create .....");
+
+        setOnClickListener(new View.OnClickListener(){
+
+                                 }
+
         // ---
         /*
         BottomNavigationView bottomNavigation = findViewById(R.id.bottom_navigation);
