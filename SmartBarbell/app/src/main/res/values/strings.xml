@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SmartBarbell</string>
+    <string name="app_name">Smart Barbell</string>
     <string name="file_created">File Created</string>
     <string name="file_create_error">File Creation Error</string>
     <string name="title_home">Home</string>

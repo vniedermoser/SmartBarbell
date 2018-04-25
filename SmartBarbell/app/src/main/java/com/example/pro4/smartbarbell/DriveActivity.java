@@ -21,6 +21,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public abstract class DriveActivity extends MainActivity {
+
     private static final String TAG = "DriveActivity";
 
     /**
@@ -48,10 +49,12 @@ public abstract class DriveActivity extends MainActivity {
      */
     private TaskCompletionSource<DriveId> mOpenItemTaskSource;
 
+    // ----------------------------------
+
     @Override
     protected void onStart() {
         super.onStart();
-        Log.d(TAG, "visited");
+        Log.i(TAG, "On Start");
         signIn();
     }
 
@@ -132,7 +135,7 @@ public abstract class DriveActivity extends MainActivity {
     /**
      * Called after the user has signed in and the Drive client has been initialized.
      */
-    protected abstract void onDriveClientReady();
+    protected void onDriveClientReady() {}
 
     /**
      * ---
