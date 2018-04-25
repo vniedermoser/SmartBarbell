@@ -1,5 +1,6 @@
 package com.example.pro4.smartbarbell;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -8,9 +9,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
-
+import android.widget.Button;
 import com.google.android.gms.auth.api.signin.GoogleSignInApi;
 import com.google.android.gms.common.api.GoogleApiClient;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,6 +32,26 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Log.i(TAG, "On Create .....");
+
+        Button button1 = (Button)findViewById(R.id.ResultListActivity);
+        Button button2 = (Button)findViewById(R.id.TimerActivity);
+
+        button1.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ExerciseActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        button2.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, TimerActivity.class);
+                startActivity(intent);
+            }
+        });
+
         // ---
 
 //        BottomNavigationView bottomNavigation = findViewById(R.id.bottom_navigation);
@@ -101,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
     // -------------------
     // end basic structure
     // -------------------
-
+/*
     private BottomNavigationView.OnNavigationItemSelectedListener navigationListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -129,5 +151,5 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
     };
-
+*/
 }

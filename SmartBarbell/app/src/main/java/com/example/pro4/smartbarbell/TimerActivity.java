@@ -89,12 +89,12 @@ public class TimerActivity extends AppCompatActivity {
 
                 textView.setText("00:00:00");
 
-                ListElementsArrayList.clear();
-
-                adapter.notifyDataSetChanged();
+                //ListElementsArrayList.clear();
+                //adapter.notifyDataSetChanged();
             }
         });
 
+        /*
         lap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -105,6 +105,7 @@ public class TimerActivity extends AppCompatActivity {
 
             }
         });
+        */
 
     }
 
