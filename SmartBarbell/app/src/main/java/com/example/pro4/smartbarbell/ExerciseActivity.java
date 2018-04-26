@@ -18,21 +18,24 @@ import java.util.Calendar;
 
 public class ExerciseActivity extends AppCompatActivity {
 
-    //Variables
+    //List and Adapter Variables
     private ArrayList<String> arrayList;
     private ArrayAdapter<String> adapter;
 
-    //Calendar Variables
-    private TextView tv;
-    private Calendar myCurrentDate;
-    int day, month, year;
-
     //Input Variables
-    // private EditText dateInput;
     private EditText weightInput;
     private EditText repsInput;
+    private TextView dateInput;
 
     private Button buttonWeight;
+
+    //Calendar Variables
+    int day, month, year;
+
+    //Array for Design output
+    private String[] monthArray = {"Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"};
+    //saveDate saves the whole date data
+    private String saveDate;
 
 
     @Override
@@ -40,15 +43,20 @@ public class ExerciseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exercise);
 
-        tv = (TextView) findViewById(R.id.dateInput);
-        myCurrentDate = Calendar.getInstance();
+        dateInput = (TextView) findViewById(R.id.dateInput);
+        Calendar myCurrentDate = Calendar.getInstance();
         day = myCurrentDate.get(Calendar.DAY_OF_MONTH);
         month = myCurrentDate.get(Calendar.MONTH)+1;
         year = myCurrentDate.get(Calendar.YEAR);
 
-        tv.setText(day+"/n"+month);
 
-        tv.setOnClickListener(new View.OnClickListener() {
+        //set Text for Design
+        dateInput.setText(day+"\r\n"+monthArray[month-1]);
+        //save date correct for list
+        saveDate = day + "/" + month +"/" + year;
+
+        //https://www.youtube.com/watch?v=5qdnoRHfAYU
+        dateInput.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -56,7 +64,10 @@ public class ExerciseActivity extends AppCompatActivity {
                     @Override
                     public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
                         monthOfYear = monthOfYear + 1;
-                        tv.setText(dayOfMonth + "/" + monthOfYear + "/" + year);
+                        //set Text for Design
+                        dateInput.setText(dayOfMonth +"\r\n"+monthArray[monthOfYear-1]);
+                        //save date correct for list
+                        saveDate = dayOfMonth + "/" + monthOfYear +"/" + year;
                     }
                 }, year, month-1, day);
                 datePickerDialog.show();
@@ -80,9 +91,9 @@ public class ExerciseActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String newItem= tv.getText().toString() +"   " + weightInput.getText().toString() + buttonWeight.getText().toString() +" "+ repsInput.getText().toString();
+                String newItem= saveDate + " " + weightInput.getText().toString() + buttonWeight.getText().toString() +" "+ repsInput.getText().toString();
                 // add new item to arraylist
-                arrayList.add(newItem);
+                arrayList.add(0,newItem);
                 // notify listview of data changed
                 adapter.notifyDataSetChanged();
             }
