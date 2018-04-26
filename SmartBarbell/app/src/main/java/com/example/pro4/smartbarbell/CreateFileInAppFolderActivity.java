@@ -17,7 +17,7 @@ import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
 
-class CreateFileInAppFolderActivity extends DriveActivity {
+class CreateFileInAppFolderActivity extends LoginActivity {
 
     private static final String TAG = "CreateFileInAppFolder";
 

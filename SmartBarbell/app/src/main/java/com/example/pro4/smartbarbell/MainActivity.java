@@ -17,6 +17,9 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
 
+    protected String name;
+    protected String profile_pic_url;
+
     // ---------------------
     // start basic structure
     // ---------------------
