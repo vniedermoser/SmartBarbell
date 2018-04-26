@@ -36,10 +36,8 @@
             android:name=".WorkoutActivity"
             android:label="@string/title_activity_workout" />
         <activity android:name=".ExerciseActivity" />
-<<<<<<< HEAD
         <activity android:name=".TimerActivity" />
         <activity android:name=".AccountActivity" />
-=======
         <activity android:name=".ExerciseListActivity" />
         <activity android:name=".TimerActivity" />
         <activity
@@ -50,7 +48,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.pro4.smartbarbell.MainActivity" />
         </activity>
->>>>>>> 1711a896bae1f3091fd52c27d6a57af79ea26247
+
     </application>
 
 </manifest>
