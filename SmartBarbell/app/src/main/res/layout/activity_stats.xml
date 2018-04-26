@@ -4,30 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
-    <Button
-        android:id="@+id/ResultListActivity"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
-        android:text="ResultListActivity"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/TimerActivity"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
-        android:text="TimerActivity"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/ResultListActivity"
-        app:layout_constraintTop_toTopOf="parent" />
+    tools:context=".StatsActivity">
 
 
     <FrameLayout
@@ -43,10 +20,11 @@
         android:layout_centerHorizontal="true"
         android:background="@color/color_darkGrey"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="44dp">
 
         <ImageButton
-            android:id="@+id/main_calendar"
+            android:id="@+id/stats_calendar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -55,7 +33,7 @@
             android:tint="@color/color_main" />
 
         <ImageButton
-            android:id="@+id/main_workout"
+            android:id="@+id/stats_workout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -64,24 +42,24 @@
             android:tint="@color/color_main" />
 
         <ImageButton
-            android:id="@+id/main_nfc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:backgroundTint="@color/color_main"
-            android:src="@drawable/ic_nfc" />
-
-        <ImageButton
-            android:id="@+id/main_stats"
+            android:id="@+id/stats_nfc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:backgroundTint="@color/color_darkGrey"
-            android:src="@drawable/ic_stats"
+            android:src="@drawable/ic_nfc"
             android:tint="@color/color_main" />
 
         <ImageButton
-            android:id="@+id/main_account"
+            android:id="@+id/stats_stats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/color_main"
+            android:src="@drawable/ic_stats" />
+
+        <ImageButton
+            android:id="@+id/stats_account"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -90,7 +68,4 @@
             android:tint="@color/color_main" />
 
     </LinearLayout>
-
-
-
 </android.support.constraint.ConstraintLayout>

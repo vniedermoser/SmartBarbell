@@ -10,12 +10,16 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
+
 import com.google.android.gms.auth.api.signin.GoogleSignInApi;
 import com.google.android.gms.common.api.GoogleApiClient;
 
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
+    protected String name;
+    protected String profile_pic_url;
 
     // ---------------------
     // start basic structure
@@ -31,6 +35,14 @@ public class MainActivity extends AppCompatActivity {
 
         Button button1 = (Button)findViewById(R.id.ResultListActivity);
         Button button2 = (Button)findViewById(R.id.TimerActivity);
+
+        ImageButton calendar = findViewById(R.id.main_calendar) ;
+        ImageButton workout = findViewById(R.id.main_workout) ;
+        ImageButton stats = findViewById(R.id.main_stats) ;
+        ImageButton account = findViewById(R.id.main_account) ;
+
+
+
 
         button1.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -48,13 +60,44 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // ---
-        /*
-        BottomNavigationView bottomNavigation = findViewById(R.id.bottom_navigation);
-        bottomNavigation.setOnNavigationItemSelectedListener(navigationListener);
-        */
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new NFCActivity()).commit();
+
+        //-----------------
+        //----navigation---
+        //-----------------
+
+
+        calendar.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, CalendarActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        workout.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, WorkoutActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        stats.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, StatsActivity.class);
+                startActivity(intent);
+            }
+        });
+        account.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, AccountActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        //------------------
+
+
+
     }
 
     /* (non-Javadoc)
@@ -90,6 +133,7 @@ public class MainActivity extends AppCompatActivity {
     /* (non-Javadoc)
      * @see android.app.Activity#onResume()
      */
+
     @Override
     protected void onResume() {
         super.onResume();
