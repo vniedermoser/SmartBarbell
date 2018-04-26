@@ -14,7 +14,7 @@ public class WorkoutActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_workout);
 
-        
+
         //-----------------
         //----navigation---
         //-----------------
