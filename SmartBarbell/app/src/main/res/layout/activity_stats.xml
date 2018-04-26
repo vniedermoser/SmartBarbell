@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".StatsActivity">
+    tools:context=".StatsActivity"
+    android:background="@drawable/bg_1280">
 
 
     <FrameLayout
@@ -39,7 +40,8 @@
             android:layout_weight="1"
             android:backgroundTint="@color/color_darkGrey"
             android:src="@drawable/ic_workout"
-            android:tint="@color/color_main" />
+            android:tint="@color/color_main"
+            />
 
         <ImageButton
             android:id="@+id/stats_nfc"
