@@ -1,19 +1,54 @@
 package com.example.pro4.smartbarbell;
 
+import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
 
+public class CalendarActivity extends AppCompatActivity {
 
-public class CalendarActivity extends Fragment {
-
-    @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.calendar, container, false);
-    }
-}
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_calendar);
 
+        //-----------------
+        //----navigation---
+        //-----------------
+
+
+        ImageButton workout = findViewById(R.id.cal_workout) ;
+        ImageButton nfc = findViewById(R.id.cal_nfc) ;
+        ImageButton stats = findViewById(R.id.cal_stats) ;
+        ImageButton account = findViewById(R.id.cal_account) ;
+
+        nfc.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                Intent intent = new Intent(CalendarActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        workout.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                Intent intent = new Intent(CalendarActivity.this, WorkoutActivity.class);
+                startActivity(intent);
+            }
+        });
+        stats.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                Intent intent = new Intent(CalendarActivity.this, StatsActivity.class);
+                startActivity(intent);
+            }
+        });
+        account.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                Intent intent = new Intent(CalendarActivity.this, AccountActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+}
