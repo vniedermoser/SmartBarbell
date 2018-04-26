@@ -3,6 +3,9 @@
     package="com.example.pro4.smartbarbell">
 
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <application
         android:allowBackup="true"
@@ -27,14 +30,27 @@
         <activity android:name=".StatsActivity" />
         <activity
             android:name=".CalendarActivity"
-            android:label="@string/title_activity_calender"
+            android:label="@string/title_activity_calendar"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".WorkoutActivity"
             android:label="@string/title_activity_workout" />
         <activity android:name=".ExerciseActivity" />
+<<<<<<< HEAD
         <activity android:name=".TimerActivity" />
         <activity android:name=".AccountActivity" />
+=======
+        <activity android:name=".ExerciseListActivity" />
+        <activity android:name=".TimerActivity" />
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.pro4.smartbarbell.MainActivity" />
+        </activity>
+>>>>>>> 1711a896bae1f3091fd52c27d6a57af79ea26247
     </application>
 
 </manifest>
