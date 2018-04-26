@@ -10,13 +10,14 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
+
 import com.google.android.gms.auth.api.signin.GoogleSignInApi;
 import com.google.android.gms.common.api.GoogleApiClient;
 
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
-
     protected String name;
     protected String profile_pic_url;
 
@@ -32,39 +33,38 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Log.i(TAG, "On Create .....");
 
-//        Button button1 = (Button)findViewById(R.id.ResultListActivity);
-//        Button button2 = (Button)findViewById(R.id.TimerActivity);
-//
-//        button1.setOnClickListener(new View.OnClickListener(){
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(MainActivity.this, ExerciseActivity.class);
-//                startActivity(intent);
-//            }
-//        });
-//
-//        button2.setOnClickListener(new View.OnClickListener(){
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(MainActivity.this, TimerActivity.class);
-//                startActivity(intent);
-//            }
-//        });
+        Button button1 = (Button)findViewById(R.id.ResultListActivity);
+        Button button2 = (Button)findViewById(R.id.TimerActivity);
+
+        ImageButton calendar = findViewById(R.id.main_calendar) ;
+        ImageButton workout = findViewById(R.id.main_workout) ;
+        ImageButton stats = findViewById(R.id.main_stats) ;
+        ImageButton account = findViewById(R.id.main_account) ;
 
 
-//        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new NFCActivity()).commit();
+
+
+        button1.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ExerciseActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        button2.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, TimerActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
 
         //-----------------
         //----navigation---
         //-----------------
-
-
-/*
-
-        Button calendar = findViewById(R.id.calender) ;
-        Button workout = findViewById(R.id.workout) ;
-        Button stats = findViewById(R.id.stats) ;
-        Button account = findViewById(R.id.account) ;
 
 
         calendar.setOnClickListener(new View.OnClickListener(){
@@ -74,13 +74,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
         workout.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, WorkoutActivity.class);
                 startActivity(intent);
             }
         });
+
         stats.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, StatsActivity.class);
@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
 
         //------------------
 
-*/
+
 
     }
 
@@ -133,6 +133,7 @@ public class MainActivity extends AppCompatActivity {
     /* (non-Javadoc)
      * @see android.app.Activity#onResume()
      */
+
     @Override
     protected void onResume() {
         super.onResume();
@@ -164,6 +165,7 @@ public class MainActivity extends AppCompatActivity {
     // end basic structure
     // -------------------
 
-}
+    };
+
 
 

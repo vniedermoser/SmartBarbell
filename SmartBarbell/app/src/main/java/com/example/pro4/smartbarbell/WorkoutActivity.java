@@ -1,58 +1,56 @@
 package com.example.pro4.smartbarbell;
 
 import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ListView;
-import android.widget.Toast;
-import java.util.ArrayList;
-import java.util.Arrays;
+import android.widget.ImageButton;
 
+public class WorkoutActivity extends AppCompatActivity {
 
-public class WorkoutActivity extends Fragment {
-
-
-    @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-
-        View view = inflater.inflate(R.layout.workout, container, false);
-
-        String[] workouts = {"Workout 1", "Workout 2", "Workout 3","Workout 1", "Workout 2", "Workout 3","Workout 1", "Workout 2", "Workout 3","Workout 1", "Workout 2", "Workout 3"};
-
-        ListView workoutList = view.findViewById(R.id.listOfWorkouts);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_workout);
 
 
-        // Adapter macht die liste clickable
-        ArrayAdapter<String> listViewAdapter = new ArrayAdapter<String>(
-                getActivity(),
-                android.R.layout.simple_list_item_1,
-                workouts
-        );
-        workoutList.setAdapter(listViewAdapter);
+        //-----------------
+        //----navigation---
+        //-----------------
 
-        workoutList.setOnItemClickListener(new AdapterView.OnItemClickListener(){
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if(position >= 0) {
-                    Toast.makeText(getActivity(), "go to exercise", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(getActivity(), ExerciseListActivity.class);
-                    startActivity(intent);
-                }
+        ImageButton calendar = findViewById(R.id.wo_calendar) ;
+        ImageButton nfc = findViewById(R.id.wo_nfc) ;
+        ImageButton stats = findViewById(R.id.wo_stats) ;
+        ImageButton account = findViewById(R.id.wo_account) ;
 
+        calendar.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                Intent intent = new Intent(WorkoutActivity.this, CalendarActivity.class);
+                startActivity(intent);
+            }
+        });
+        nfc.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                Intent intent = new Intent(WorkoutActivity.this, MainActivity.class);
+                startActivity(intent);
             }
         });
 
-        return view;
+
+        stats.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                Intent intent = new Intent(WorkoutActivity.this, StatsActivity.class);
+                startActivity(intent);
+            }
+        });
+        account.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                Intent intent = new Intent(WorkoutActivity.this, AccountActivity.class);
+                startActivity(intent);
+            }
+        });
     }
-};
 
 
-
+}
