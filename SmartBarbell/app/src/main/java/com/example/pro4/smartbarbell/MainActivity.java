@@ -48,13 +48,53 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // ---
-        /*
-        BottomNavigationView bottomNavigation = findViewById(R.id.bottom_navigation);
-        bottomNavigation.setOnNavigationItemSelectedListener(navigationListener);
-        */
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new NFCActivity()).commit();
+
+        //-----------------
+        //----navigation---
+        //-----------------
+
+
+/*
+
+        Button calendar = findViewById(R.id.calender) ;
+        Button workout = findViewById(R.id.workout) ;
+        Button stats = findViewById(R.id.stats) ;
+        Button account = findViewById(R.id.account) ;
+
+
+        calendar.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, CalendarActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+        workout.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, WorkoutActivity.class);
+                startActivity(intent);
+            }
+        });
+        stats.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, StatsActivity.class);
+                startActivity(intent);
+            }
+        });
+        account.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, AccountActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        //------------------
+
+*/
+
+
     }
 
     /* (non-Javadoc)
