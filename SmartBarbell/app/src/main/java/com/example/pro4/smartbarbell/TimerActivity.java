@@ -4,14 +4,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ListView;
 import android.widget.TextView;
 import android.os.Handler;
-import java.util.Arrays;
-import java.util.List;
-import java.util.ArrayList;
 
 // https://www.android-examples.com/android-create-stopwatch-example-tutorial-in-android-studio/
 
@@ -22,7 +17,7 @@ public class TimerActivity extends AppCompatActivity {
     //Button lap;
     long MillisecondTime, StartTime, TimeBuff, UpdateTime = 0L ;
     Handler handler;
-    int Seconds, Minutes, MilliSeconds ;
+    int Seconds, Minutes, Centisecond;
 
     /*
     ListView listView ;
@@ -90,7 +85,7 @@ public class TimerActivity extends AppCompatActivity {
                 UpdateTime = 0L ;
                 Seconds = 0 ;
                 Minutes = 0 ;
-                MilliSeconds = 0 ;
+                Centisecond = 0 ;
 
                 textView.setText("00:00:00");
 
@@ -129,11 +124,12 @@ public class TimerActivity extends AppCompatActivity {
 
             Seconds = Seconds % 60;
 
-            MilliSeconds = (int) (UpdateTime % 1000);
+            Centisecond = (int) (UpdateTime % 100);
 
-            textView.setText("" + Minutes + ":"
-                    + String.format("%02d", Seconds) + ":"
-                    + String.format("%03d", MilliSeconds));
+
+            textView.setText("" + String.format("%02d", Minutes) + ":"
+                    + String.format("%02d", Seconds) + ","
+                    + String.format("%02d", Centisecond));
 
             handler.postDelayed(this, 0);
         }
