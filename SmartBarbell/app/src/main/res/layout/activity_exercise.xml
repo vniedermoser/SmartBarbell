@@ -4,33 +4,60 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ExerciseActivity">
+    tools:context=".ExerciseActivity"
+    tools:layout_editor_absoluteY="25dp">
+
+    <TextView
+        android:id="@+id/dateInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="60dp"
+        android:ems="10"
+        android:text="Date"
+        app:layout_constraintEnd_toStartOf="@+id/weightInput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/userInput"
-        android:text="10"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
+        android:id="@+id/weightInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:layout_marginTop="50dp"
         android:ems="10"
         android:inputType="number"
-        app:layout_constraintStart_toStartOf="parent"
-     />
+        android:text=""
+        app:layout_constraintEnd_toStartOf="@+id/buttonWeight"
+        app:layout_constraintStart_toEndOf="@+id/dateInput"
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <EditText
+        android:id="@+id/repsInput"
+        android:layout_width="60dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text=""
+        app:layout_constraintEnd_toStartOf="@+id/addResult"
+        app:layout_constraintStart_toEndOf="@+id/buttonWeight"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/addResult"
-        android:layout_width="wrap_content"
+        android:layout_width="44dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="50dp"
         android:text="+"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.836"
-        app:layout_constraintStart_toEndOf="@+id/userInput"
-        app:layout_constraintTop_toBottomOf="@+id/listview1" />
+        app:layout_constraintStart_toEndOf="@+id/repsInput"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
         android:id="@+id/results"
@@ -39,11 +66,68 @@
         android:layout_below="@+id/btnStart"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userInput" />
+        app:layout_constraintTop_toBottomOf="@+id/addResult" />
+
+
+    <!-- Ned so wichtig -->
+
+    <Button
+        android:id="@+id/buttonWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="50dp"
+        android:text="kg"
+        app:layout_constraintEnd_toStartOf="@+id/repsInput"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/weightInput"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="24dp"
+        android:text="Reps"
+        app:layout_constraintBottom_toTopOf="@+id/repsInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.852"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="24dp"
+        android:text="Weight"
+        app:layout_constraintBottom_toTopOf="@+id/weightInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="Date"
+        app:layout_constraintBottom_toTopOf="@+id/dateInput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </android.support.constraint.ConstraintLayout>
