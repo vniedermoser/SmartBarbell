@@ -29,27 +29,27 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
         Log.i(TAG, "On Create .....");
 
-        Button button1 = (Button)findViewById(R.id.ResultListActivity);
-        Button button2 = (Button)findViewById(R.id.TimerActivity);
-
-        button1.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ExerciseActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        button2.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, TimerActivity.class);
-                startActivity(intent);
-            }
-        });
+//        Button button1 = (Button)findViewById(R.id.ResultListActivity);
+//        Button button2 = (Button)findViewById(R.id.TimerActivity);
+//
+//        button1.setOnClickListener(new View.OnClickListener(){
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(MainActivity.this, ExerciseActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+//
+//        button2.setOnClickListener(new View.OnClickListener(){
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(MainActivity.this, TimerActivity.class);
+//                startActivity(intent);
+//            }
+//        });
 
         // ---
         /*
@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigation.setOnNavigationItemSelectedListener(navigationListener);
         */
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new NFCActivity()).commit();
+//        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new NFCActivity()).commit();
     }
 
     /* (non-Javadoc)

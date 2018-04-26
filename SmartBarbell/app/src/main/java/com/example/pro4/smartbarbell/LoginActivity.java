@@ -42,30 +42,8 @@ public class LoginActivity extends MainActivity implements View.OnClickListener 
      */
     protected static final int REQUEST_CODE_SIGN_IN = 0;
 
-    /**
-     * Request code for the Drive picker
-     */
-    protected static final int REQUEST_CODE_OPEN_ITEM = 1;
-
-    /**
-     * Handles high-level drive functions like sync
-     */
-    private DriveClient mDriveClient;
-
-    /**
-     * Handle access to Drive resources/files.
-     */
-    private DriveResourceClient mDriveResourceClient;
-
-    /**
-     * Tracks completion of the drive picker
-     */
-    private TaskCompletionSource<DriveId> mOpenItemTaskSource;
 
     // -------------------------------------
-
-//            this.name = googleSignInAccount.getDisplayName();
-//            this.profile_pic_url = googleSignInAccount.getPhotoUrl().toString();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -160,14 +138,6 @@ public class LoginActivity extends MainActivity implements View.OnClickListener 
         profile_pic_url = mUser.getPhotoUrl().toString();
     }
 
-    /**
-     * Continues the sign-in process, initializing the Drive clients with the current user's account.
-     */
-    private void initializeDriveClient(GoogleSignInAccount signInAccount) {
-        mDriveClient = Drive.getDriveClient(getApplicationContext(), signInAccount);
-        mDriveResourceClient = Drive.getDriveResourceClient(getApplicationContext(), signInAccount);
-        onDriveClientReady();
-    }
 
     /**
      * Shows a toast message.
@@ -176,20 +146,4 @@ public class LoginActivity extends MainActivity implements View.OnClickListener 
         Toast.makeText(this, message, Toast.LENGTH_LONG).show();
     }
 
-    /**
-     * Called after the user has signed in and the Drive client has been initialized.
-     */
-    protected void onDriveClientReady() {
-    }
-
-    /**
-     * ---
-     */
-    protected DriveClient getDriveClient() {
-        return mDriveClient;
-    }
-
-    protected DriveResourceClient getDriveResourceClient() {
-        return mDriveResourceClient;
-    }
 }
