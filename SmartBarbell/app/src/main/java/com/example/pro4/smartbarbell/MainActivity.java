@@ -32,9 +32,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Log.i(TAG, "On Create .....");
-
-        Button button1 = (Button) findViewById(R.id.ResultListActivity);
-        Button button2 = (Button) findViewById(R.id.TimerActivity);
+        // ---
+        Button button1 = findViewById(R.id.ResultListActivity);
+        Button button2 = findViewById(R.id.TimerActivity);
 
         ImageButton calendar = findViewById(R.id.main_calendar);
         ImageButton workout = findViewById(R.id.main_workout);
@@ -49,7 +49,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
 
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,7 +65,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
 
         //-----------------
         //----navigation---
