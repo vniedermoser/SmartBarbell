@@ -88,9 +88,6 @@ public class TimerActivity extends AppCompatActivity {
                 Centisecond = 0 ;
 
                 textView.setText("00:00:00");
-
-                //ListElementsArrayList.clear();
-                //adapter.notifyDataSetChanged();
             }
         });
 
