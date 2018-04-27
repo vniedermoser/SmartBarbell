@@ -13,7 +13,7 @@ public class AccountActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_account);
-        /*Fix 26.04.13:40*/
+        /*Fix 26.04.18*/
 
 
 
@@ -25,6 +25,15 @@ public class AccountActivity extends AppCompatActivity {
         ImageButton workout = findViewById(R.id.acc_workout) ;
         ImageButton nfc = findViewById(R.id.acc_nfc) ;
         ImageButton stats = findViewById(R.id.acc_stats) ;
+
+        Button settings = findViewById(R.id.acc_settings);
+
+        settings.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                Intent intent = new Intent(AccountActivity.this, SettingsActivity.class);
+                startActivity(intent);
+            }
+        });
 
         nfc.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {

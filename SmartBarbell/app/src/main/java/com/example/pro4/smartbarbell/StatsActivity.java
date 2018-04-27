@@ -14,6 +14,8 @@ public class StatsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stats);
 
+
+
         //-----------------
         //----navigation---
         //-----------------
@@ -22,6 +24,15 @@ public class StatsActivity extends AppCompatActivity {
         ImageButton workout = findViewById(R.id.stats_workout) ;
         ImageButton nfc = findViewById(R.id.stats_nfc) ;
         ImageButton account = findViewById(R.id.stats_account) ;
+
+        Button settings = findViewById(R.id.stats_settings);
+
+        settings.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                Intent intent = new Intent(StatsActivity.this, SettingsActivity.class);
+                startActivity(intent);
+            }
+        });
 
         nfc.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {

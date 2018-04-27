@@ -41,6 +41,15 @@ public class MainActivity extends AppCompatActivity {
         ImageButton stats = findViewById(R.id.main_stats) ;
         ImageButton account = findViewById(R.id.main_account) ;
 
+        Button settings = findViewById(R.id.main_settings);
+
+        settings.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
 
 
