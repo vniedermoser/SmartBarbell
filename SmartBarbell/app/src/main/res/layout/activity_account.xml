@@ -16,8 +16,7 @@
         android:background="@color/color_darkGrey"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        tools:layout_editor_absoluteX="30dp">
 
         <ImageButton
             android:id="@+id/acc_calendar"
@@ -57,12 +56,11 @@
 
         <ImageButton
             android:id="@+id/wo_account"
-            android:layout_width="wrap_content"
+            android:layout_width="51dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@color/color_main"
-            android:src="@drawable/ic_account"
-             />
+            android:src="@drawable/ic_account" />
 
     </LinearLayout>
 
