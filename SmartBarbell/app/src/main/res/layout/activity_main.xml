@@ -47,7 +47,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <ImageButton
-            android:id="@+id/wo_calendar"
+            android:id="@+id/main_calendar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -56,25 +56,24 @@
             android:tint="@color/color_main" />
 
         <ImageButton
-            android:id="@+id/wo_workout"
+            android:id="@+id/main_workout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:backgroundTint="@color/color_darkGrey"
-            android:tint="@color/color_main"
             android:src="@drawable/ic_workout"
-            />
+            android:tint="@color/color_main" />
 
         <ImageButton
-            android:id="@+id/wo_nfc"
+            android:id="@+id/main_nfc"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@color/color_main"
-            android:src="@drawable/ic_nfc"/>
+            android:src="@drawable/ic_nfc" />
 
         <ImageButton
-            android:id="@+id/wo_stats"
+            android:id="@+id/main_stats"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -83,14 +82,13 @@
             android:tint="@color/color_main" />
 
         <ImageButton
-            android:id="@+id/wo_account"
+            android:id="@+id/main_account"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:backgroundTint="@color/color_darkGrey"
             android:src="@drawable/ic_account"
-            android:tint="@color/color_main"
-            />
+            android:tint="@color/color_main" />
 
     </LinearLayout>
 
@@ -110,8 +108,8 @@
 
             <Button
                 android:id="@+id/main_settings"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_marginBottom="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
@@ -143,8 +141,8 @@
 
             <Button
                 android:id="@+id/main_menu"
-                android:layout_width="53dp"
-                android:layout_height="50dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
                 android:adjustViewBounds="false"
