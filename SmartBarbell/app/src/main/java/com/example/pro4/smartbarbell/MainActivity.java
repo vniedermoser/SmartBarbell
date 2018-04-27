@@ -21,9 +21,9 @@ public class MainActivity extends AppCompatActivity {
     protected String name;
     protected String profile_pic_url;
 
-    // ---------------------
-    // start basic structure
-    // ---------------------
+    // -----------------------
+    // [START] basic structure
+    // -----------------------
 
     // see here for ref https://stackoverflow.com/questions/6812003/difference-between-oncreate-and-onstart
 
@@ -33,18 +33,25 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Log.i(TAG, "On Create .....");
 
-        Button button1 = (Button)findViewById(R.id.ResultListActivity);
-        Button button2 = (Button)findViewById(R.id.TimerActivity);
+        Button button1 = (Button) findViewById(R.id.ResultListActivity);
+        Button button2 = (Button) findViewById(R.id.TimerActivity);
 
-        ImageButton calendar = findViewById(R.id.main_calendar) ;
-        ImageButton workout = findViewById(R.id.main_workout) ;
-        ImageButton stats = findViewById(R.id.main_stats) ;
-        ImageButton account = findViewById(R.id.main_account) ;
+        ImageButton calendar = findViewById(R.id.main_calendar);
+        ImageButton workout = findViewById(R.id.main_workout);
+        ImageButton stats = findViewById(R.id.main_stats);
+        ImageButton account = findViewById(R.id.main_account);
+
+        Button settings = findViewById(R.id.main_settings);
+
+        settings.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
-
-
-        button1.setOnClickListener(new View.OnClickListener(){
+        button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, ExerciseActivity.class);
@@ -52,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        button2.setOnClickListener(new View.OnClickListener(){
+        button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, TimerActivity.class);
@@ -61,33 +68,32 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-
         //-----------------
         //----navigation---
         //-----------------
 
 
-        calendar.setOnClickListener(new View.OnClickListener(){
+        calendar.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, CalendarActivity.class);
                 startActivity(intent);
             }
         });
 
-        workout.setOnClickListener(new View.OnClickListener(){
+        workout.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, WorkoutActivity.class);
                 startActivity(intent);
             }
         });
 
-        stats.setOnClickListener(new View.OnClickListener(){
+        stats.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, StatsActivity.class);
                 startActivity(intent);
             }
         });
-        account.setOnClickListener(new View.OnClickListener(){
+        account.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, AccountActivity.class);
                 startActivity(intent);
@@ -95,7 +101,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //------------------
-
 
 
     }
@@ -161,11 +166,11 @@ public class MainActivity extends AppCompatActivity {
         // ---
     }
 
-    // -------------------
-    // end basic structure
-    // -------------------
+    // ---------------------
+    // [END] basic structure
+    // ---------------------
 
-    };
+}
 
 
 

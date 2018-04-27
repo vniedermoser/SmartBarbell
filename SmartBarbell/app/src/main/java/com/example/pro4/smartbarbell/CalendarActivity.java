@@ -24,6 +24,15 @@ public class CalendarActivity extends AppCompatActivity {
         ImageButton stats = findViewById(R.id.cal_stats) ;
         ImageButton account = findViewById(R.id.cal_account) ;
 
+        Button settings = findViewById(R.id.cal_settings);
+
+        settings.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                Intent intent = new Intent(CalendarActivity.this, SettingsActivity.class);
+                startActivity(intent);
+            }
+        });
+
         nfc.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
                 Intent intent = new Intent(CalendarActivity.this, MainActivity.class);

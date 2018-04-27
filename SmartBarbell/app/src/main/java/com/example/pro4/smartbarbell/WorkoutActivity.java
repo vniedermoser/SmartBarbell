@@ -24,6 +24,15 @@ public class WorkoutActivity extends AppCompatActivity {
         ImageButton stats = findViewById(R.id.wo_stats) ;
         ImageButton account = findViewById(R.id.wo_account) ;
 
+        Button settings = findViewById(R.id.wo_settings);
+
+        settings.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                Intent intent = new Intent(WorkoutActivity.this, SettingsActivity.class);
+                startActivity(intent);
+            }
+        });
+
         calendar.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
                 Intent intent = new Intent(WorkoutActivity.this, CalendarActivity.class);
