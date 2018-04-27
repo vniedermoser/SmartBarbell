@@ -43,7 +43,7 @@
                 android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:text="nfc"
+                android:text="@string/title_activity_nfc"
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textColor="@color/color_white"
