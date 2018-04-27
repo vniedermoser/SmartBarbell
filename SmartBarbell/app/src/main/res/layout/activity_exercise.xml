@@ -4,12 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg"
     tools:context=".ExerciseActivity"
-    tools:layout_editor_absoluteY="25dp"
-    android:background="@drawable/bg_1280"
-    android:backgroundTint="@color/color_darkGrey"
-    android:backgroundTintMode="multiply"
-    >
+    tools:layout_editor_absoluteY="25dp">
 
     <!--Toolbar-->
     <android.support.v7.widget.Toolbar
@@ -48,16 +45,15 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:text="Exercise"
+                android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textColor="@color/color_white"
                 android:textSize="25sp"
                 android:textStyle="bold"
-                android:textAlignment="center"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.46"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                 />
+                app:layout_constraintTop_toTopOf="parent" />
 
 
             <Button
@@ -99,8 +95,8 @@
 
             android:layout_marginBottom="16dp"
             android:background="@color/color_darkGrey"
-            android:paddingTop="16dp"
-            android:paddingBottom="16dp">
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp">
 
             <ImageView
                 android:id="@+id/imageView"
@@ -175,26 +171,26 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="8dp">
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/description_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_marginStart="16dp"
+                android:layout_weight="1"
                 android:text="Date "
-                android:textColor="@color/color_white"/>
+                android:textColor="@color/color_white" />
 
             <TextView
                 android:id="@+id/description_weight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_marginLeft="-12dp"
+                android:layout_weight="1"
                 android:text="Weight "
-                android:textColor="@color/color_white"/>
+                android:textColor="@color/color_white" />
 
 
             <TextView
@@ -203,7 +199,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Reps"
-                android:textColor="@color/color_white"/>
+                android:textColor="@color/color_white" />
 
         </LinearLayout>
 
@@ -216,56 +212,54 @@
                 android:id="@+id/dateInput"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
                 android:layout_marginStart="16dp"
                 android:layout_weight="1"
                 android:background="@drawable/rounded_corner"
                 android:padding="5dp"
                 android:text="Date"
-                android:layout_marginBottom="10dp"
                 android:textAlignment="center"
-                android:textColor="@color/color_white"/>
-                <!--android:ems="10"
-                tools:layout_editor_absoluteY="162dp"-->
+                android:textColor="@color/color_white" />
+            <!--android:ems="10"
+            tools:layout_editor_absoluteY="162dp"-->
 
             <EditText
                 android:id="@+id/weightInput"
                 android:layout_width="wrap_content"
-                android:ems="1"
                 android:layout_height="match_parent"
+                android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_weight="1"
-                android:layout_marginEnd="8dp"
+                android:ems="1"
 
                 android:hint="00"
-                android:textColorHint="@color/color_main"
-                android:textAlignment="viewEnd"
                 android:inputType="number"
+                android:textAlignment="viewEnd"
                 android:textColor="@color/color_main"
-                />
+                android:textColorHint="@color/color_main" />
 
             <Button
                 android:id="@+id/buttonWeight"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="kg"
-                android:textColor="@color/color_white"
                 android:background="@drawable/rounded_corner"
                 android:backgroundTint="@color/color_darkGrey"
-                android:textAllCaps="false"/>
+                android:text="kg"
+                android:textAllCaps="false"
+                android:textColor="@color/color_white" />
 
             <EditText
                 android:id="@+id/repsInput"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
                 android:layout_marginEnd="8dp"
+                android:layout_weight="1"
                 android:hint="00"
-                android:textColorHint="@color/color_main"
-                android:textAlignment="viewEnd"
                 android:inputType="number"
+                android:textAlignment="viewEnd"
                 android:textColor="@color/color_main"
-                />
+                android:textColorHint="@color/color_main" />
 
             <Button
                 android:id="@+id/addResult"
@@ -273,9 +267,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
                 android:layout_weight="1"
+                android:background="@drawable/rounded_corner"
                 android:text="+"
-                android:textColor="@color/color_white"
-                android:background="@drawable/rounded_corner"/>
+                android:textColor="@color/color_white" />
 
         </LinearLayout>
 
@@ -285,14 +279,13 @@
             android:layout_height="0dp"
             android:layout_below="@+id/btnStart"
             android:layout_centerHorizontal="true"
-            android:layout_weight="1"
-            android:layout_marginTop="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
 
             android:background="@drawable/rounded_corner"
-            android:backgroundTint="@color/color_darkGrey"
-            />
+            android:backgroundTint="@color/color_darkGrey" />
 
     </LinearLayout>
 
@@ -322,10 +315,9 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
 
-            android:backgroundTint="@color/color_main"
             android:background="@color/color_main"
-            android:src="@drawable/ic_workout"
-            />
+            android:backgroundTint="@color/color_main"
+            android:src="@drawable/ic_workout" />
 
         <ImageButton
             android:id="@+id/wo_nfc"

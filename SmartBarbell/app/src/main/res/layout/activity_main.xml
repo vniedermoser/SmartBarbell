@@ -4,9 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_1280"
-    android:backgroundTint="@color/color_midGrey"
-    android:backgroundTintMode="multiply"
+    android:background="@drawable/bg"
     tools:context=".MainActivity">
 
     <!-- Toolbar -->
@@ -46,8 +44,8 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:text="nfc"
-                android:textAllCaps="true"
                 android:textAlignment="center"
+                android:textAllCaps="true"
                 android:textColor="@color/color_white"
                 android:textSize="25sp"
                 android:textStyle="bold"
@@ -125,8 +123,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
 
-            android:backgroundTint="@color/color_main"
             android:background="@color/color_main"
+            android:backgroundTint="@color/color_main"
             android:src="@drawable/ic_nfc" />
 
         <ImageButton
@@ -150,12 +148,6 @@
             android:tint="@color/color_main" />
 
     </LinearLayout>
-
-
-
-
-
-
 
 
 </android.support.constraint.ConstraintLayout>

@@ -4,10 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AccountActivity"
-    android:background="@drawable/bg_1280"
-    android:backgroundTint="@color/color_midGrey"
-    android:backgroundTintMode="multiply">
+    android:background="@drawable/bg"
+    tools:context=".AccountActivity">
 
     <!--Toolbar-->
     <android.support.v7.widget.Toolbar
@@ -22,6 +20,7 @@
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
             <Button
                 android:id="@+id/acc_settings"
                 android:layout_width="30dp"
@@ -35,6 +34,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
             <TextView
                 android:id="@+id/textView5"
                 android:layout_width="123dp"
@@ -44,8 +44,8 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:text="account"
-                android:textAllCaps="true"
                 android:textAlignment="center"
+                android:textAllCaps="true"
                 android:textColor="@color/color_white"
                 android:textSize="25sp"
                 android:textStyle="bold"
@@ -54,6 +54,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="account" />
+
             <Button
                 android:id="@+id/acc_menu"
                 android:layout_width="40dp"
@@ -91,8 +92,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
 
-            android:src="@drawable/ic_calendar"
             android:backgroundTint="@color/color_darkGrey"
+            android:src="@drawable/ic_calendar"
             android:tint="@color/color_main" />
 
         <ImageButton
@@ -101,8 +102,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
 
-            android:src="@drawable/ic_workout"
             android:backgroundTint="@color/color_darkGrey"
+            android:src="@drawable/ic_workout"
             android:tint="@color/color_main" />
 
         <ImageButton
@@ -111,8 +112,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
 
-            android:src="@drawable/ic_nfc"
             android:backgroundTint="@color/color_darkGrey"
+            android:src="@drawable/ic_nfc"
             android:tint="@color/color_main" />
 
         <ImageButton
@@ -121,8 +122,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
 
-            android:src="@drawable/ic_stats"
             android:backgroundTint="@color/color_darkGrey"
+            android:src="@drawable/ic_stats"
             android:tint="@color/color_main" />
 
         <ImageButton
@@ -131,9 +132,9 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
 
-            android:src="@drawable/ic_account"
-            android:backgroundTint="@color/color_main"
             android:background="@color/color_main"
+            android:backgroundTint="@color/color_main"
+            android:src="@drawable/ic_account"
             android:tint="@color/color_white" />
 
     </LinearLayout>
