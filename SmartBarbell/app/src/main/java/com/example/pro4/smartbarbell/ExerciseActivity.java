@@ -1,10 +1,12 @@
 package com.example.pro4.smartbarbell;
 
 import android.app.DatePickerDialog;
+import android.content.Context;
 import android.os.Handler;
 import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.JsonWriter;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -13,7 +15,13 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
@@ -41,16 +49,20 @@ public class ExerciseActivity extends AppCompatActivity {
 
     //Calendar Variables
     int day, month, year;
-
     //Array for Design output
     private String[] monthArray = {"Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"};
     //saveDate saves the whole date data
     private String saveDate;
 
+    //File
+    String filename;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exercise);
+
+        filename = "Jason.json";
 
         declareVariables();
 
@@ -161,7 +173,10 @@ public class ExerciseActivity extends AppCompatActivity {
     }
     public void results(){
         ListView listView=(ListView)findViewById(R.id.results);
-        String[] items={"JSON Entry 1", "JSON Entry 2"};
+
+
+        String[] items = readJson(filename);
+
         arrayList = new ArrayList<>(Arrays.asList(items));
         adapter=new ArrayAdapter<String>(this,R.layout.result_item,R.id.txtResults,arrayList);
         listView.setAdapter(adapter);
@@ -180,10 +195,50 @@ public class ExerciseActivity extends AppCompatActivity {
                 // add new item to arraylist
                 arrayList.add(0,newItem);
                 // notify listview of data changed
+
+                saveJson(filename,newItem);
+
                 adapter.notifyDataSetChanged();
             }
 
         });
+    }
+
+    public void saveJson(String filename, String item){
+
+        //writeJsonStream(filename, item);
+
+    }
+
+    public void writeJsonStream(OutputStream out, String item) throws IOException {
+        JsonWriter writer = new JsonWriter(new OutputStreamWriter(out, "UTF-8"));
+        writer.setIndent("  ");
+        writeMessagesArray(writer, item);
+        writer.close();
+    }
+
+    public void writeMessagesArray(JsonWriter writer, String item) throws IOException {
+        writer.beginArray();
+        writer.beginObject();
+        writer.name("item").value(item);
+        writer.endObject();
+        writer.endArray();
+    }
+
+
+
+    public String[] readJson(String file){
+        String[] txt = {"2","1"};
+        /*
+        try{
+
+        }catch (Exception e){
+            e.printStackTrace();
+            Toast.makeText(ExerciseActivity.this, "Error reading file!", Toast.LENGTH_SHORT).show();
+        }
+        */
+
+        return txt;
     }
 
 }

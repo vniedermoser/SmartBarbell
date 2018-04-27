@@ -236,8 +236,8 @@
                 android:layout_weight="1"
                 android:layout_marginEnd="8dp"
 
-
-                android:text="00"
+                android:hint="00"
+                android:textColorHint="@color/color_main"
                 android:textAlignment="viewEnd"
                 android:inputType="number"
                 android:textColor="@color/color_main"
@@ -260,8 +260,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:layout_marginEnd="8dp"
-
-                android:text="00"
+                android:hint="00"
+                android:textColorHint="@color/color_main"
                 android:textAlignment="viewEnd"
                 android:inputType="number"
                 android:textColor="@color/color_main"
