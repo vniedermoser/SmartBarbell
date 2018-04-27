@@ -19,6 +19,8 @@ You have 3 entries, Date, Weight and Reps
         android:layout_marginBottom="16dp"
         android:layout_marginTop="16dp"
         android:textAlignment="center"
+        android:textColor="@color/color_white"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

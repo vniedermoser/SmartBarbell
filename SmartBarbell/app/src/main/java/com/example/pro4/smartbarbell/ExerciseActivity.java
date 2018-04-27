@@ -47,11 +47,39 @@ public class ExerciseActivity extends AppCompatActivity {
     //saveDate saves the whole date data
     private String saveDate;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exercise);
+
+        declareVariables();
+
+        timerListener();
+
+        calendar();
+
+        results();
+
+    }
+
+    public Runnable runnable = new Runnable() {
+
+        public void run() {
+            MillisecondTime = SystemClock.uptimeMillis() - StartTime;
+            UpdateTime = TimeBuff + MillisecondTime;
+            Seconds = (int) (UpdateTime / 1000);
+            Minutes = Seconds / 60;
+            Seconds = Seconds % 60;
+            Centisecond = (int) (UpdateTime % 100);
+            textView.setText("" + String.format("%02d", Minutes) + ":"
+                    + String.format("%02d", Seconds) + ","
+                    + String.format("%02d", Centisecond));
+            handler.postDelayed(this, 0);
+        }
+
+    };
+
+    public void declareVariables(){
 
         // ----- T I M E R ------ //
         textView = (TextView)findViewById(R.id.txtTimer);
@@ -60,30 +88,20 @@ public class ExerciseActivity extends AppCompatActivity {
         reset = (ImageButton)findViewById(R.id.btnReset);
         handler = new Handler() ;
 
-
         // ----- I N P U T ----- //
         dateInput = (TextView) findViewById(R.id.dateInput);
         Calendar myCurrentDate = Calendar.getInstance();
         day = myCurrentDate.get(Calendar.DAY_OF_MONTH);
         month = myCurrentDate.get(Calendar.MONTH)+1;
         year = myCurrentDate.get(Calendar.YEAR);
-
-
-        //set Text for Design
-        dateInput.setText(day+"\r\n"+monthArray[month-1]);
-        //save date correct for list
-        saveDate = day + "/" + month +"/" + year;
-
-
-        // Timer Listener
-
+    }
+    public void timerListener(){
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 StartTime = SystemClock.uptimeMillis();
                 handler.postDelayed(runnable, 0);
-
                 reset.setEnabled(false);
 
             }
@@ -95,9 +113,7 @@ public class ExerciseActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 TimeBuff += MillisecondTime;
-
                 handler.removeCallbacks(runnable);
-
                 reset.setEnabled(true);
 
             }
@@ -118,10 +134,11 @@ public class ExerciseActivity extends AppCompatActivity {
                 textView.setText("00:00:00");
             }
         });
-
-
-        //Data Listener
-
+    }
+    public void calendar(){
+        dateInput.setText(day+"\r\n"+monthArray[month-1]);
+        //save date correct for list
+        saveDate = day + "/" + month +"/" + year;
         //https://www.youtube.com/watch?v=5qdnoRHfAYU
         dateInput.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -141,6 +158,8 @@ public class ExerciseActivity extends AppCompatActivity {
             }
         });
 
+    }
+    public void results(){
         ListView listView=(ListView)findViewById(R.id.results);
         String[] items={"JSON Entry 1", "JSON Entry 2"};
         arrayList = new ArrayList<>(Arrays.asList(items));
@@ -150,7 +169,6 @@ public class ExerciseActivity extends AppCompatActivity {
         //dateInput =(EditText)findViewById(R.id.dateInput);
         weightInput =(EditText)findViewById(R.id.weightInput);
         repsInput =(EditText)findViewById(R.id.repsInput);
-
         buttonWeight=(Button)findViewById(R.id.buttonWeight);
         Button addResult=(Button)findViewById(R.id.addResult);
 
@@ -167,23 +185,5 @@ public class ExerciseActivity extends AppCompatActivity {
 
         });
     }
-
-    public Runnable runnable = new Runnable() {
-
-        public void run() {
-            MillisecondTime = SystemClock.uptimeMillis() - StartTime;
-            UpdateTime = TimeBuff + MillisecondTime;
-            Seconds = (int) (UpdateTime / 1000);
-            Minutes = Seconds / 60;
-            Seconds = Seconds % 60;
-            Centisecond = (int) (UpdateTime % 100);
-            textView.setText("" + String.format("%02d", Minutes) + ":"
-                    + String.format("%02d", Seconds) + ","
-                    + String.format("%02d", Centisecond));
-            handler.postDelayed(this, 0);
-        }
-
-    };
-
 
 }

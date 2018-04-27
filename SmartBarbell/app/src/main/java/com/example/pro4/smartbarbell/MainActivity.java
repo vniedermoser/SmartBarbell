@@ -35,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
         Log.i(TAG, "On Create .....");
         // ---
         Button button1 = findViewById(R.id.ResultListActivity);
-        Button button2 = findViewById(R.id.TimerActivity);
 
         ImageButton calendar = findViewById(R.id.main_calendar);
         ImageButton workout = findViewById(R.id.main_workout);
@@ -59,13 +58,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        button2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, TimerActivity.class);
-                startActivity(intent);
-            }
-        });
 
         //-----------------
         //----navigation---

@@ -41,9 +41,6 @@
             android:name=".ExerciseActivity"
             android:label="@string/title_activity_exercise" />
         <activity
-            android:name=".TimerActivity"
-            android:label="@string/title_activity_timer" />
-        <activity
             android:name=".AccountActivity"
             android:label="@string/title_activity_account" />
         <activity
