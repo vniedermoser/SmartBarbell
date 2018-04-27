@@ -27,7 +27,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".StatsActivity" />
+        <activity
+            android:name=".StatsActivity"
+            android:label="@string/title_activity_stats" />
         <activity
             android:name=".CalendarActivity"
             android:label="@string/title_activity_calendar"
@@ -35,19 +37,18 @@
         <activity
             android:name=".WorkoutActivity"
             android:label="@string/title_activity_workout" />
-        <activity android:name=".ExerciseActivity" />
-        <activity android:name=".TimerActivity" />
-        <activity android:name=".AccountActivity" />
-        <activity android:name=".ExerciseListActivity" />
-        <activity android:name=".TimerActivity" />
+        <activity
+            android:name=".ExerciseActivity"
+            android:label="@string/title_activity_exercise" />
+        <activity
+            android:name=".TimerActivity"
+            android:label="@string/title_activity_timer" />
+        <activity
+            android:name=".AccountActivity"
+            android:label="@string/title_activity_account" />
         <activity
             android:name=".LoginActivity"
-            android:label="@string/title_activity_login"
-            android:parentActivityName=".MainActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.pro4.smartbarbell.MainActivity" />
-        </activity>
+            android:label="@string/title_activity_login" />
     </application>
 
 </manifest>

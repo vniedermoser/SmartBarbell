@@ -3,19 +3,17 @@ package com.example.pro4.smartbarbell;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
-import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
-import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.ApiException;
-import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthCredential;
@@ -24,20 +22,18 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 
-public class LoginActivity extends MainActivity {
+public class LoginActivity extends AppCompatActivity {
 
     public static final String TAG = "LoginActivity";
 
     private FirebaseAuth mAuth;
     private SignInButton mSignInButton;
     private GoogleSignInClient mGoogleSignInClient;
-    private GoogleApiClient mGoogleApiClient;
 
     /**
      * Request code for google sign-in
      */
     protected static final int REQUEST_CODE_SIGN_IN = 0;
-
 
     // -------------------------------------
 
@@ -59,12 +55,9 @@ public class LoginActivity extends MainActivity {
 
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
 
-        Log.d(TAG, "client built");
-
         mSignInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d(TAG, "clicked");
                 signIn();
             }
         });
@@ -131,9 +124,17 @@ public class LoginActivity extends MainActivity {
                 });
     }
 
+    public String getName() {
+        return mAuth.getCurrentUser().getDisplayName();
+    }
+
+    public String getPhotoUrl() {
+        return mAuth.getCurrentUser().getPhotoUrl().toString();
+    }
+
     private void updateUI(FirebaseUser mUser) {
-        name = mUser.getDisplayName();
-        profile_pic_url = mUser.getPhotoUrl().toString();
+//        MainActivity.name = mUser.getDisplayName();
+//        MainActivity.profile_pic_url = mUser.getPhotoUrl().toString();
     }
 
     /**
