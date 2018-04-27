@@ -17,9 +17,13 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
@@ -53,16 +57,12 @@ public class ExerciseActivity extends AppCompatActivity {
     private String[] monthArray = {"Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"};
     //saveDate saves the whole date data
     private String saveDate;
-
-    //File
     String filename;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exercise);
-
-        filename = "Jason.json";
 
         declareVariables();
 
@@ -174,10 +174,10 @@ public class ExerciseActivity extends AppCompatActivity {
     public void results(){
         ListView listView=(ListView)findViewById(R.id.results);
 
+        arrayList = new ArrayList<>();
+        filename = "Jason.json";
+        readJson(filename);
 
-        String[] items = readJson(filename);
-
-        arrayList = new ArrayList<>(Arrays.asList(items));
         adapter=new ArrayAdapter<String>(this,R.layout.result_item,R.id.txtResults,arrayList);
         listView.setAdapter(adapter);
 
@@ -227,18 +227,29 @@ public class ExerciseActivity extends AppCompatActivity {
 
 
 
-    public String[] readJson(String file){
-        String[] txt = {"2","1"};
-        /*
+    public void readJson(String filename){
         try{
+            InputStream in = getAssets().open(filename);
+            int size = in.available();
+            byte[] buffer = new byte[size];
+            in.read(buffer);
+            in.close();
+
+            String json = new String (buffer, "UTF-8");
+            JSONArray jsonArray = new JSONArray(json);
+
+            for (int i = 0; i < jsonArray.length();i++){
+                JSONObject obj = jsonArray.getJSONObject(i);
+                arrayList.add(0,obj.getString("item"));
+            }
 
         }catch (Exception e){
             e.printStackTrace();
             Toast.makeText(ExerciseActivity.this, "Error reading file!", Toast.LENGTH_SHORT).show();
         }
-        */
 
-        return txt;
+
+        //return txt;
     }
 
 }
