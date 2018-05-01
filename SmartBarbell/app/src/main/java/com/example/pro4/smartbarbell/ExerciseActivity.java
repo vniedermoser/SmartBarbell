@@ -1,7 +1,9 @@
 package com.example.pro4.smartbarbell;
 
+import android.app.Application;
 import android.app.DatePickerDialog;
 import android.content.Context;
+import android.net.Uri;
 import android.os.Handler;
 import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
@@ -18,14 +20,20 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
+import java.io.Writer;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
@@ -206,28 +214,61 @@ public class ExerciseActivity extends AppCompatActivity {
 
     public void saveJson(String filename, String item){
 
-        //writeJsonStream(filename, item);
+        FileOutputStream outputStream;
+
+        try {
+            outputStream = openFileOutput(filename, Context.MODE_PRIVATE);
+            outputStream.write(item.getBytes());
+            //outputStream.flush();
+            outputStream.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        /*
+        try {
+            Writer output;
+
+            File file = new File("//assets/" + filename + ".json");
+            output = new BufferedWriter(new FileWriter(file));
+
+            JSONObject obj = new JSONObject() ;
+
+            try {
+                obj.put("item", item);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+
+            output.write(obj.toString());
+            output.close();
+
+            Toast.makeText(getApplicationContext(), "Composition saved", Toast.LENGTH_LONG).show();
+        } catch (Exception e) {
+            Toast.makeText(getBaseContext(), e.getMessage(), Toast.LENGTH_LONG).show();
+        }
+        */
+
 
     }
-
-    public void writeJsonStream(OutputStream out, String item) throws IOException {
-        JsonWriter writer = new JsonWriter(new OutputStreamWriter(out, "UTF-8"));
-        writer.setIndent("  ");
-        writeMessagesArray(writer, item);
-        writer.close();
-    }
-
-    public void writeMessagesArray(JsonWriter writer, String item) throws IOException {
-        writer.beginArray();
-        writer.beginObject();
-        writer.name("item").value(item);
-        writer.endObject();
-        writer.endArray();
-    }
-
 
 
     public void readJson(String filename){
+        try {
+            FileInputStream is = openFileInput(filename);
+            byte[] buffer = new byte[is.available()];
+            is.read(buffer);
+            is.close();
+
+            String content = new String(buffer);
+            arrayList.add(0,content);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+        /*
         try{
             InputStream in = getAssets().open(filename);
             int size = in.available();
@@ -250,6 +291,6 @@ public class ExerciseActivity extends AppCompatActivity {
 
 
         //return txt;
-    }
+    }*/
 
 }
