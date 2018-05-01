@@ -36,7 +36,7 @@ public class StatsActivity extends AppCompatActivity {
 
         nfc.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
-                Intent intent = new Intent(StatsActivity.this, MainActivity.class);
+                Intent intent = new Intent(StatsActivity.this, HomeActivity.class);
                 startActivity(intent);
             }
         });

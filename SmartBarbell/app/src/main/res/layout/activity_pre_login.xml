@@ -2,12 +2,11 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/login_layout"
+    android:id="@+id/pre_login_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="center"
-    android:theme="@style/AppTheme"
-    tools:context=".LoginActivity">
+    android:src="@drawable/bg_splash"
+    tools:context=".PreLoginActivity">
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/sign_in_button"
@@ -16,6 +15,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="160dp"
+        android:visibility="gone"
         app:buttonSize="wide"
         app:colorScheme="light" />
 
@@ -23,9 +23,8 @@
         android:id="@+id/logo_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="124dp"
+        android:layout_centerInParent="true"
         app:srcCompat="@drawable/ic_logo_text" />
 
 </RelativeLayout>

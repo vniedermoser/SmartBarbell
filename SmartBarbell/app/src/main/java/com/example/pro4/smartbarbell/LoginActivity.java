@@ -6,6 +6,8 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -26,8 +28,10 @@ public class LoginActivity extends AppCompatActivity {
 
     public static final String TAG = "LoginActivity";
 
-    private FirebaseAuth mAuth;
+    private RelativeLayout mRLayout;
+    private ImageView mLogoText;
     private SignInButton mSignInButton;
+    private FirebaseAuth mAuth;
     private GoogleSignInClient mGoogleSignInClient;
 
     /**
@@ -44,6 +48,8 @@ public class LoginActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
+        mRLayout = findViewById(R.id.login_layout);
+        mLogoText = findViewById(R.id.logo_text);
         mSignInButton = findViewById(R.id.sign_in_button);
 //        mSignInButton.setSize(SignInButton.SIZE_WIDE);
 
@@ -58,7 +64,9 @@ public class LoginActivity extends AppCompatActivity {
         mSignInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                signIn();
+//                signIn();
+                Intent homeIntent = new Intent(LoginActivity.this, HomeActivity.class);
+                startActivity(homeIntent);
             }
         });
     }
@@ -93,6 +101,7 @@ public class LoginActivity extends AppCompatActivity {
                 firebaseAuthWithGoogle(account);
             } catch (ApiException e) {
                 // Google Sign In failed, update UI appropriately
+                showMessage("Google Sign In failed.");
                 Log.w(TAG, "Google sign in failed", e);
                 // ...
             }
@@ -115,10 +124,10 @@ public class LoginActivity extends AppCompatActivity {
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithCredential:failure", task.getException());
-//                            Snackbar.make(findViewById(R.id.main_layout), "Authentication Failed.", Snackbar.LENGTH_SHORT).show();
+                            showMessage("Authentication failed.");
+                            // Snackbar.make(findViewById(R.id.main_layout), "Authentication Failed.", Snackbar.LENGTH_SHORT).show();
                             updateUI(null);
                         }
-
                         // ...
                     }
                 });

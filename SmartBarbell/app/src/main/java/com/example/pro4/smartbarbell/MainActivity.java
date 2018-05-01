@@ -34,66 +34,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Log.i(TAG, "On Create .....");
         // ---
-        Button button1 = findViewById(R.id.ResultListActivity);
-
-        ImageButton calendar = findViewById(R.id.main_calendar);
-        ImageButton workout = findViewById(R.id.main_workout);
-        ImageButton stats = findViewById(R.id.main_stats);
-        ImageButton account = findViewById(R.id.main_account);
-
-        Button settings = findViewById(R.id.main_settings);
-
-        settings.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        button1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ExerciseActivity.class);
-                startActivity(intent);
-            }
-        });
-
-
-        //-----------------
-        //----navigation---
-        //-----------------
-
-
-        calendar.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, CalendarActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        workout.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, WorkoutActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        stats.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, StatsActivity.class);
-                startActivity(intent);
-            }
-        });
-        account.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, AccountActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        //------------------
-
-
+        Intent preLoginIntent = new Intent(MainActivity.this, PreLoginActivity.class);
+        startActivity(preLoginIntent);
     }
 
     /* (non-Javadoc)

@@ -37,7 +37,7 @@ public class AccountActivity extends AppCompatActivity {
 
         nfc.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
-                Intent intent = new Intent(AccountActivity.this, MainActivity.class);
+                Intent intent = new Intent(AccountActivity.this, HomeActivity.class);
                 startActivity(intent);
             }
         });

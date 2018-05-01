@@ -30,7 +30,7 @@ public class SettingsActivity extends AppCompatActivity {
 
         main.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
-                Intent intent = new Intent(SettingsActivity.this, MainActivity.class);
+                Intent intent = new Intent(SettingsActivity.this, HomeActivity.class);
                 startActivity(intent);
             }
         });

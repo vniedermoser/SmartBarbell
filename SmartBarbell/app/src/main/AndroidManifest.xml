@@ -28,30 +28,49 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Login screens -->
         <activity
-            android:name=".StatsActivity"
-            android:label="@string/title_activity_stats"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name=".CalendarActivity"
-            android:label="@string/title_activity_calendar"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name=".WorkoutActivity"
-            android:label="@string/title_activity_workout"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name=".ExerciseActivity"
-            android:label="@string/title_activity_exercise"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name=".AccountActivity"
-            android:label="@string/title_activity_account"
+            android:name=".PreLoginActivity"
+            android:label="@string/title_activity_pre_login"
+            android:theme="@style/AppTheme.PreLogin"
             android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- Home starts here -->
+        <activity
+            android:name=".HomeActivity"
+            android:label="@string/title_activity_home"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".StatsActivity"
+            android:label="@string/title_activity_stats"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".CalendarActivity"
+            android:label="@string/title_activity_calendar"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".WorkoutActivity"
+            android:label="@string/title_activity_workout"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ExerciseActivity"
+            android:label="@string/title_activity_exercise"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".AccountActivity"
+            android:label="@string/title_activity_account"
+            android:theme="@style/AppTheme"
             android:windowSoftInputMode="adjustPan" />
     </application>
 

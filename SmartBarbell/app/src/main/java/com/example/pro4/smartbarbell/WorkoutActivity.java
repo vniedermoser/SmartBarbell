@@ -41,7 +41,7 @@ public class WorkoutActivity extends AppCompatActivity {
         });
         nfc.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
-                Intent intent = new Intent(WorkoutActivity.this, MainActivity.class);
+                Intent intent = new Intent(WorkoutActivity.this, HomeActivity.class);
                 startActivity(intent);
             }
         });
