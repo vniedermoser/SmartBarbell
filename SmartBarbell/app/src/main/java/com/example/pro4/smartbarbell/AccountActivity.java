@@ -14,9 +14,7 @@ public class AccountActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_account);
         /*Fix 26.04.18*/
-
-
-
+        
         //-----------------
         //----navigation---
         //-----------------

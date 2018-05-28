@@ -44,7 +44,7 @@
                 android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:text="@string/title_activity_workout"
+                android:text="@string/title_activity_workouts"
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textColor="@color/color_white"
@@ -53,8 +53,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.45"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:text="workout" />
+                app:layout_constraintTop_toTopOf="parent" />
 
 
             <Button
@@ -81,7 +80,52 @@
 
     </android.support.v7.widget.Toolbar>
 
-    <!-- Workouts -->
+    <!-- Workouts
+    <ListView
+        android:id="@+id/yourWorkouts"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/addWorkout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <Button
+        android:id="@+id/addWorkout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/rounded_corner"
+        android:text="+"
+
+        android:textColor="@color/color_white"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/workoutName"
+        app:layout_constraintTop_toBottomOf="@+id/yourWorkouts" />
+
+    <EditText
+        android:id="@+id/workoutName"
+        android:layout_width="286dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="16dp"
+        android:ems="10"
+        android:hint="Add new workout"
+        android:inputType="textPersonName"
+        android:textAlignment="viewStart"
+        android:textColor="@color/color_main"
+
+        android:textColorHint="@color/color_main"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintEnd_toStartOf="@+id/addWorkout"
+        app:layout_constraintStart_toStartOf="parent" />
+ -->
 
     <!--Bottom Navigation -->
     <LinearLayout
