@@ -3,6 +3,7 @@ package com.example.pro4.smartbarbell;
 import android.app.Application;
 import android.app.DatePickerDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Handler;
 import android.os.SystemClock;
@@ -71,6 +72,46 @@ public class ExerciseActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exercise);
+        ImageButton calendar = findViewById(R.id.wo_calendar) ;
+        ImageButton nfc = findViewById(R.id.wo_nfc) ;
+        ImageButton stats = findViewById(R.id.wo_stats) ;
+        ImageButton account = findViewById(R.id.wo_account) ;
+
+        Button settings = findViewById(R.id.wo_settings);
+
+        settings.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                Intent intent = new Intent(ExerciseActivity.this, SettingsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        calendar.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                Intent intent = new Intent(ExerciseActivity.this, CalendarActivity.class);
+                startActivity(intent);
+            }
+        });
+        nfc.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                Intent intent = new Intent(ExerciseActivity.this, HomeActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+        stats.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                Intent intent = new Intent(ExerciseActivity.this, StatsActivity.class);
+                startActivity(intent);
+            }
+        });
+        account.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                Intent intent = new Intent(ExerciseActivity.this, AccountActivity.class);
+                startActivity(intent);
+            }
+        });
 
         declareVariables();
 
@@ -291,6 +332,6 @@ public class ExerciseActivity extends AppCompatActivity {
 
 
         //return txt;
-    }*/
+         }*/
 
 }

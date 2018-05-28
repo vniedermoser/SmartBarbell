@@ -8,7 +8,7 @@
     tools:context=".ExerciseActivity"
     tools:layout_editor_absoluteY="25dp">
 
-    <!--Toolbar-->
+    <!-- Toolbar -->
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="0dp"
@@ -18,12 +18,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/cal_settings"
+                android:id="@+id/wo_settings"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginBottom="8dp"
@@ -38,38 +39,42 @@
 
             <TextView
                 android:id="@+id/textView5"
-                android:layout_width="135dp"
+                android:layout_width="121dp"
                 android:layout_height="36dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:text="@string/title_activity_exercise"
+                android:text="@string/title_activity_workout"
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textColor="@color/color_white"
                 android:textSize="25sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.46"
+                app:layout_constraintHorizontal_bias="0.45"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
 
             <Button
-                android:id="@+id/cal_menu"
+                android:id="@+id/wo_menu"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
+                android:layout_marginBottom="11dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
                 android:adjustViewBounds="false"
                 android:background="@drawable/ic_menu_dots_white"
                 android:cropToPadding="false"
                 android:gravity="end"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.9"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.72" />
+
 
         </android.support.constraint.ConstraintLayout>
 

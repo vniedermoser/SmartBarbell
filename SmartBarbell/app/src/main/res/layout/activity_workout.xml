@@ -80,7 +80,7 @@
 
     </android.support.v7.widget.Toolbar>
 
-    <!-- Workouts
+    <!-- Workouts -->
     <ListView
         android:id="@+id/yourWorkouts"
         android:layout_width="0dp"
@@ -120,12 +120,10 @@
         android:inputType="textPersonName"
         android:textAlignment="viewStart"
         android:textColor="@color/color_main"
-
         android:textColorHint="@color/color_main"
         app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
         app:layout_constraintEnd_toStartOf="@+id/addWorkout"
         app:layout_constraintStart_toStartOf="parent" />
- -->
 
     <!--Bottom Navigation -->
     <LinearLayout
