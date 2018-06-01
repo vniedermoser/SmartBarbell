@@ -72,6 +72,7 @@
             android:label="@string/title_activity_account"
             android:theme="@style/AppTheme"
             android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".SettingActivity"></activity>
     </application>
 
 </manifest>

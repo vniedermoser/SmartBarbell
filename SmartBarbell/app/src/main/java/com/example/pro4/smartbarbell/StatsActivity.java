@@ -29,10 +29,14 @@ public class StatsActivity extends AppCompatActivity {
 
         settings.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
-                Intent intent = new Intent(StatsActivity.this, SettingsActivity.class);
+                Intent intent = new Intent(StatsActivity.this, SettingActivity.class);
                 startActivity(intent);
             }
         });
+
+
+
+
 
         nfc.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {

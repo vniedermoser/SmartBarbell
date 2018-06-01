@@ -81,7 +81,7 @@ public class ExerciseActivity extends AppCompatActivity {
 
         settings.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
-                Intent intent = new Intent(ExerciseActivity.this, SettingsActivity.class);
+                Intent intent = new Intent(ExerciseActivity.this, SettingActivity.class);
                 startActivity(intent);
             }
         });

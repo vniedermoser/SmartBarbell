@@ -24,11 +24,11 @@ public class AccountActivity extends AppCompatActivity {
         ImageButton nfc = findViewById(R.id.acc_nfc) ;
         ImageButton stats = findViewById(R.id.acc_stats) ;
 
-        Button settings = findViewById(R.id.acc_settings);
+        ImageButton settings = findViewById(R.id.acc_settings);
 
         settings.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
-                Intent intent = new Intent(AccountActivity.this, SettingsActivity.class);
+                Intent intent = new Intent(AccountActivity.this, SettingActivity.class);
                 startActivity(intent);
             }
         });

@@ -28,7 +28,7 @@ public class CalendarActivity extends AppCompatActivity {
 
         settings.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
-                Intent intent = new Intent(CalendarActivity.this, SettingsActivity.class);
+                Intent intent = new Intent(CalendarActivity.this, SettingActivity.class);
                 startActivity(intent);
             }
         });

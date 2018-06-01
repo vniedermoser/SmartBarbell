@@ -25,7 +25,7 @@ public class HomeActivity extends AppCompatActivity {
 
         settings.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, SettingsActivity.class);
+                Intent intent = new Intent(HomeActivity.this, SettingActivity.class);
                 startActivity(intent);
             }
         });
