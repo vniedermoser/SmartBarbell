@@ -13,6 +13,7 @@
     <string name="title_activity_stats">Stats</string>
     <string name="title_activity_timer">Timer</string>
     <string name="title_activity_workout">Workouts</string>
+    <string name="title_activity_exerciseList">WorkoutName1</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
 

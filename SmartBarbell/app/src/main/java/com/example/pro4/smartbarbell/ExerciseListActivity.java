@@ -15,45 +15,45 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class WorkoutActivity extends AppCompatActivity {
+public class ExerciseListActivity extends AppCompatActivity {
 
 
-     //List and Adapter Variables
-     private ArrayList<String> arrayList;
-     private ArrayAdapter<String> adapter;
+    //List and Adapter Variables
+    private ArrayList<String> arrayList;
+    private ArrayAdapter<String> adapter;
 
-     //Input Variables
-     private EditText workoutName;
+    //Input Variables
+    private EditText workoutName;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_workout);
+        setContentView(R.layout.activity_exercise_list);
 
         navigation();
 
 
-         ListView listView=(ListView)findViewById(R.id.yourWorkouts);
+        ListView listView=(ListView)findViewById(R.id.yourWorkouts);
 
-         arrayList = new ArrayList<>();
+        arrayList = new ArrayList<>();
 
-         adapter=new ArrayAdapter<String>(this,R.layout.workout_item,R.id.WorkoutButton,arrayList);
-         listView.setAdapter(adapter);
+        adapter=new ArrayAdapter<String>(this,R.layout.workout_item,R.id.WorkoutButton,arrayList);
+        listView.setAdapter(adapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(WorkoutActivity.this, "List item was clicked at " + position, Toast.LENGTH_SHORT).show();
+                Toast.makeText(ExerciseListActivity.this, "List item was clicked at " + position, Toast.LENGTH_SHORT).show();
             }
         });
 
-         workoutName =(EditText)findViewById(R.id.workoutName);
-         Button addWorkout=(Button)findViewById(R.id.addWorkout);
+        workoutName =(EditText)findViewById(R.id.workoutName);
+        Button addWorkout=(Button)findViewById(R.id.addWorkout);
 
-         //TODO: check if empty, pull / push to jason
+        //TODO: check if empty, pull / push to jason
 
-         addWorkout.setOnClickListener(new View.OnClickListener() {
+        addWorkout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -78,20 +78,20 @@ public class WorkoutActivity extends AppCompatActivity {
 
         settings.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
-                Intent intent = new Intent(WorkoutActivity.this, SettingActivity.class);
+                Intent intent = new Intent(ExerciseListActivity.this, SettingsActivity.class);
                 startActivity(intent);
             }
         });
 
         calendar.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
-                Intent intent = new Intent(WorkoutActivity.this, CalendarActivity.class);
+                Intent intent = new Intent(ExerciseListActivity.this, CalendarActivity.class);
                 startActivity(intent);
             }
         });
         nfc.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
-                Intent intent = new Intent(WorkoutActivity.this, HomeActivity.class);
+                Intent intent = new Intent(ExerciseListActivity.this, HomeActivity.class);
                 startActivity(intent);
             }
         });
@@ -99,13 +99,13 @@ public class WorkoutActivity extends AppCompatActivity {
 
         stats.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
-                Intent intent = new Intent(WorkoutActivity.this, StatsActivity.class);
+                Intent intent = new Intent(ExerciseListActivity.this, StatsActivity.class);
                 startActivity(intent);
             }
         });
         account.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
-                Intent intent = new Intent(WorkoutActivity.this, AccountActivity.class);
+                Intent intent = new Intent(ExerciseListActivity.this, AccountActivity.class);
                 startActivity(intent);
             }
         });
@@ -117,7 +117,7 @@ public class WorkoutActivity extends AppCompatActivity {
         //Toast.makeText(this, bt.getText().toString(),Toast.LENGTH_LONG).show();
 
         //Todo: Link auf die richtige Übung
-        Intent intent = new Intent(WorkoutActivity.this, ExerciseListActivity.class);
+        Intent intent = new Intent(ExerciseListActivity.this, ExerciseActivity.class);
         startActivity(intent);
     }
 

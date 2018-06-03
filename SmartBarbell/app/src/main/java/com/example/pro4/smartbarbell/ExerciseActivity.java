@@ -72,16 +72,27 @@ public class ExerciseActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exercise);
-        ImageButton calendar = findViewById(R.id.wo_calendar) ;
-        ImageButton nfc = findViewById(R.id.wo_nfc) ;
-        ImageButton stats = findViewById(R.id.wo_stats) ;
-        ImageButton account = findViewById(R.id.wo_account) ;
 
-        Button settings = findViewById(R.id.wo_settings);
+        ImageButton calendar = findViewById(R.id.calendar) ;
+        ImageButton workout = findViewById(R.id.workout) ;
+        ImageButton nfc = findViewById(R.id.nfc) ;
+        ImageButton stats = findViewById(R.id.stats) ;
+        ImageButton account = findViewById(R.id.account) ;
+        Button settings = findViewById(R.id.settings);
 
         settings.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
-                Intent intent = new Intent(ExerciseActivity.this, SettingsActivity.class);
+                Intent intent = new Intent(ExerciseActivity.this, SettingActivity.class);
+<<<<<<< HEAD
+                startActivity(intent);
+            }
+        });
+
+        workout.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                Intent intent = new Intent(ExerciseActivity.this, WorkoutActivity.class);
+=======
+>>>>>>> db454a32b067d30c6e423d6e09ef3a43ce9e341b
                 startActivity(intent);
             }
         });

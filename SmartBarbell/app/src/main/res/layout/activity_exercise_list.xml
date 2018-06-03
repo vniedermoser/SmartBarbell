@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:theme="@style/AppTheme"
-    tools:context=".WorkoutActivity">
+    tools:context=".ExerciseListActivity">
 
     <!-- Toolbar -->
     <android.support.v7.widget.Toolbar
@@ -44,7 +44,7 @@
                 android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="4dp"
-                android:text="@string/title_activity_workout"
+                android:text="@string/title_activity_exerciseList"
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textColor="@color/color_white"
@@ -116,7 +116,7 @@
         android:layout_marginBottom="8dp"
         android:layout_marginStart="16dp"
         android:ems="10"
-        android:hint="Add new workout"
+        android:hint="Add new exercises"
         android:inputType="textPersonName"
         android:textAlignment="viewStart"
         android:textColor="@color/color_main"

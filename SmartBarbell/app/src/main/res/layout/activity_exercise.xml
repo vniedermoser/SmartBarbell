@@ -24,7 +24,7 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/wo_settings"
+                android:id="@+id/settings"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginBottom="8dp"
@@ -304,7 +304,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <ImageButton
-            android:id="@+id/wo_calendar"
+            android:id="@+id/calendar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -314,7 +314,7 @@
             android:tint="@color/color_main" />
 
         <ImageButton
-            android:id="@+id/wo_workout"
+            android:id="@+id/workout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -324,7 +324,7 @@
             android:src="@drawable/ic_workout" />
 
         <ImageButton
-            android:id="@+id/wo_nfc"
+            android:id="@+id/nfc"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -334,7 +334,7 @@
             android:tint="@color/color_main" />
 
         <ImageButton
-            android:id="@+id/wo_stats"
+            android:id="@+id/stats"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -344,7 +344,7 @@
             android:tint="@color/color_main" />
 
         <ImageButton
-            android:id="@+id/wo_account"
+            android:id="@+id/account"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
