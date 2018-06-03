@@ -14,17 +14,16 @@ public class SettingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting);
 
-        ImageButton calendar = findViewById(R.id.set_calendar) ;
-        ImageButton workout = findViewById(R.id.set_workout) ;
-        ImageButton nfc = findViewById(R.id.set_nfc) ;
-        ImageButton stats = findViewById(R.id.set_stats) ;
-        ImageButton account = findViewById(R.id.set_account) ;
-        Button main = findViewById(R.id.set_settings);
+        ImageButton calendar = findViewById(R.id.calendar) ;
+        ImageButton workout = findViewById(R.id.workout) ;
+        ImageButton nfc = findViewById(R.id.nfc) ;
+        ImageButton stats = findViewById(R.id.stats) ;
+        ImageButton account = findViewById(R.id.account) ;
+        Button settings = findViewById(R.id.settings);
 
-        main.setOnClickListener(new View.OnClickListener(){
+        settings.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
-                Intent intent = new Intent(SettingActivity.this, HomeActivity.class);
-                startActivity(intent);
+                finish();
             }
         });
 

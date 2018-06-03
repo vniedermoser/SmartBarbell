@@ -28,7 +28,7 @@ public class AccountActivity extends AppCompatActivity {
 
         settings.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
-                Intent intent = new Intent(AccountActivity.this, SettingsActivity.class);
+                Intent intent = new Intent(AccountActivity.this, SettingActivity.class);
                 startActivity(intent);
             }
         });

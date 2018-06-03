@@ -116,7 +116,7 @@ public class WorkoutActivity extends AppCompatActivity {
         Button bt=(Button)view;
         //Toast.makeText(this, bt.getText().toString(),Toast.LENGTH_LONG).show();
 
-        //Todo: Link auf die richtige Übung
+        //Todo: Link auf die richtige Liste an Übungen
         Intent intent = new Intent(WorkoutActivity.this, ExerciseListActivity.class);
         startActivity(intent);
     }

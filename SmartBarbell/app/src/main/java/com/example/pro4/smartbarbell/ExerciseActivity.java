@@ -83,7 +83,6 @@ public class ExerciseActivity extends AppCompatActivity {
         settings.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
                 Intent intent = new Intent(ExerciseActivity.this, SettingActivity.class);
-<<<<<<< HEAD
                 startActivity(intent);
             }
         });
@@ -91,8 +90,6 @@ public class ExerciseActivity extends AppCompatActivity {
         workout.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
                 Intent intent = new Intent(ExerciseActivity.this, WorkoutActivity.class);
-=======
->>>>>>> db454a32b067d30c6e423d6e09ef3a43ce9e341b
                 startActivity(intent);
             }
         });
