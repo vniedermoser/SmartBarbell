@@ -5,7 +5,6 @@
     android:id="@+id/pre_login_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:src="@drawable/bg_splash"
     tools:context=".PreLoginActivity">
 
     <com.google.android.gms.common.SignInButton
