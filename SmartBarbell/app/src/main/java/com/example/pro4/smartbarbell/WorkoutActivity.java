@@ -38,6 +38,8 @@ public class WorkoutActivity extends AppCompatActivity {
 
          arrayList = new ArrayList<>();
 
+         //TODO: Aus dem bestehenden Json, die Namen der Workouts abrufen und schon in Liste schreiben
+
          adapter=new ArrayAdapter<String>(this,R.layout.workout_item,R.id.WorkoutButton,arrayList);
          listView.setAdapter(adapter);
 
@@ -51,17 +53,18 @@ public class WorkoutActivity extends AppCompatActivity {
          workoutName =(EditText)findViewById(R.id.workoutName);
          Button addWorkout=(Button)findViewById(R.id.addWorkout);
 
-         //TODO: check if empty, pull / push to jason
+         //TODO: check if empty and name available, push to jason
 
          addWorkout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 String newItem= workoutName.getText().toString();
-                //Todo: mit diesem Namen eine neue Activity erzeugen, die abgeleitet von ExerciseActivity ist?
 
                 // add new item to arraylist
                 arrayList.add(0,newItem);
+                //TODO: In das bestehende Json, den neuen Workout Namen schreiben (wenn noch nicht oben geschehen)
+
                 // notify listview of data changed
                 adapter.notifyDataSetChanged();
             }
