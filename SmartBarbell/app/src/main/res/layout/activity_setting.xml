@@ -4,10 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:theme="@style/AppTheme"
-    tools:context=".SettingsActivity">
+    tools:context=".SettingActivity">
 
-    <!--Toolbar-->
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="0dp"
@@ -22,7 +20,7 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/set_settings"
+                android:id="@+id/settings"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginBottom="8dp"
@@ -41,7 +39,7 @@
 
             <TextView
                 android:id="@+id/textView5"
-                android:layout_width="123dp"
+                android:layout_width="0dp"
                 android:layout_height="36dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginEnd="8dp"
@@ -60,40 +58,22 @@
                 tools:text="settings" />
 
 
-            <Button
-                android:id="@+id/set_menu"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:adjustViewBounds="false"
-                android:background="@drawable/ic_menu_dots_white"
-                android:cropToPadding="false"
-                android:gravity="end"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.9"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-
         </android.support.constraint.ConstraintLayout>
 
     </android.support.v7.widget.Toolbar>
 
-    <!-- Settings -->
-
-    <!--Bottom Navigation -->
     <LinearLayout
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/color_darkGrey"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
         <ImageButton
-            android:id="@+id/set_calendar"
+            android:id="@+id/calendar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -103,7 +83,7 @@
             android:tint="@color/color_main" />
 
         <ImageButton
-            android:id="@+id/set_workout"
+            android:id="@+id/workout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -113,7 +93,7 @@
             android:tint="@color/color_main" />
 
         <ImageButton
-            android:id="@+id/set_nfc"
+            android:id="@+id/nfc"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -123,7 +103,7 @@
             android:tint="@color/color_main" />
 
         <ImageButton
-            android:id="@+id/set_stats"
+            android:id="@+id/stats"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -133,7 +113,7 @@
             android:tint="@color/color_main" />
 
         <ImageButton
-            android:id="@+id/set_account"
+            android:id="@+id/account"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"

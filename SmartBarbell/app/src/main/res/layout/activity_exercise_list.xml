@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:theme="@style/AppTheme"
-    tools:context=".StatsActivity">
+    tools:context=".ExerciseListActivity">
 
     <!-- Toolbar -->
     <android.support.v7.widget.Toolbar
@@ -17,12 +17,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/stats_settings"
+                android:id="@+id/wo_settings"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginBottom="8dp"
@@ -37,74 +38,105 @@
 
             <TextView
                 android:id="@+id/textView5"
-                android:layout_width="123dp"
+                android:layout_width="0dp"
                 android:layout_height="36dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/title_activity_stats"
+                android:layout_marginTop="4dp"
+                android:text="@string/title_activity_exerciseList"
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textColor="@color/color_white"
                 android:textSize="25sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.45"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:text="stats" />
+                app:layout_constraintTop_toTopOf="parent" />
 
 
             <Button
-                android:id="@+id/stats_menu"
+                android:id="@+id/wo_menu"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
+                android:layout_marginBottom="11dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
                 android:adjustViewBounds="false"
                 android:background="@drawable/ic_menu_dots_white"
                 android:cropToPadding="false"
                 android:gravity="end"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.9"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.72" />
 
 
         </android.support.constraint.ConstraintLayout>
-        
-
-
-
 
 
     </android.support.v7.widget.Toolbar>
 
-    <com.github.mikephil.charting.charts.BarChart
-        android:id="@+id/bargraph"
-        android:layout_width="match_parent"
-        android:layout_height="400dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="0dp" />
-    <!-- Stats -->
+    <!-- Workouts -->
+    <ListView
+        android:id="@+id/yourWorkouts"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/addWorkout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
-    <!-- Bottom Navigation -->
+    <Button
+        android:id="@+id/addWorkout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/rounded_corner"
+        android:text="+"
+
+        android:textColor="@color/color_white"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/workoutName"
+        app:layout_constraintTop_toBottomOf="@+id/yourWorkouts" />
+
+    <EditText
+        android:id="@+id/workoutName"
+        android:layout_width="286dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="16dp"
+        android:ems="10"
+        android:hint="Add new exercises"
+        android:inputType="textPersonName"
+        android:textAlignment="viewStart"
+        android:textColor="@color/color_main"
+        android:textColorHint="@color/color_main"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintEnd_toStartOf="@+id/addWorkout"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--Bottom Navigation -->
     <LinearLayout
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/color_darkGrey"
-        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
         <ImageButton
-            android:id="@+id/stats_calendar"
+            android:id="@+id/wo_calendar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -114,17 +146,17 @@
             android:tint="@color/color_main" />
 
         <ImageButton
-            android:id="@+id/stats_workout"
+            android:id="@+id/wo_workout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
 
-            android:backgroundTint="@color/color_darkGrey"
-            android:src="@drawable/ic_workout"
-            android:tint="@color/color_main" />
+            android:background="@color/color_main"
+            android:backgroundTint="@color/color_main"
+            android:src="@drawable/ic_workout" />
 
         <ImageButton
-            android:id="@+id/stats_nfc"
+            android:id="@+id/wo_nfc"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -134,17 +166,17 @@
             android:tint="@color/color_main" />
 
         <ImageButton
-            android:id="@+id/stats_stats"
+            android:id="@+id/wo_stats"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
 
-            android:background="@color/color_main"
-            android:backgroundTint="@color/color_main"
-            android:src="@drawable/ic_stats" />
+            android:backgroundTint="@color/color_darkGrey"
+            android:src="@drawable/ic_stats"
+            android:tint="@color/color_main" />
 
         <ImageButton
-            android:id="@+id/stats_account"
+            android:id="@+id/wo_account"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -154,5 +186,6 @@
             android:tint="@color/color_main" />
 
     </LinearLayout>
+
 
 </android.support.constraint.ConstraintLayout>
