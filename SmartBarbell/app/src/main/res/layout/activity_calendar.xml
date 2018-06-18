@@ -44,7 +44,6 @@
                 android:layout_marginTop="8dp"
                 android:text="@string/title_activity_calendar"
                 android:textAlignment="center"
-                android:textAllCaps="true"
                 android:textColor="@color/color_white"
                 android:textSize="25sp"
                 android:textStyle="bold"
@@ -52,7 +51,7 @@
                 app:layout_constraintHorizontal_bias="0.46"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:text="calendar" />
+               />
 
             <Button
                 android:id="@+id/cal_menu"
@@ -74,6 +73,22 @@
     </android.support.v7.widget.Toolbar>
 
     <!--Calendar-->
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="THIS WEEK"
+        android:textColor="@color/color_main"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+
+
+
 
     <!--Bottom Navigation -->
     <LinearLayout

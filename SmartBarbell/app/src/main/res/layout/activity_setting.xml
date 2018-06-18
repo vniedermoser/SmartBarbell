@@ -47,7 +47,6 @@
                 android:layout_marginTop="8dp"
                 android:text="@string/title_activity_settings"
                 android:textAlignment="center"
-                android:textAllCaps="true"
                 android:textColor="@color/color_white"
                 android:textSize="25sp"
                 android:textStyle="bold"
@@ -55,7 +54,7 @@
                 app:layout_constraintHorizontal_bias="0.43"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:text="settings" />
+                />
 
 
         </android.support.constraint.ConstraintLayout>
