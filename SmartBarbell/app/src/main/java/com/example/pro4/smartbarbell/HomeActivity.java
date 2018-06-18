@@ -16,7 +16,6 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        Button button1 = findViewById(R.id.ResultListActivity);
 
         ImageButton calendar = findViewById(R.id.main_calendar);
         ImageButton workout = findViewById(R.id.main_workout);
@@ -32,13 +31,6 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        button1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, ExerciseActivity.class);
-                startActivity(intent);
-            }
-        });
 
 
         //-----------------
