@@ -15,7 +15,7 @@ import org.json.JSONArray;
 
 import java.util.ArrayList;
 
-public class CalendarActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class CalendarActivity extends AppCompatActivity  {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
