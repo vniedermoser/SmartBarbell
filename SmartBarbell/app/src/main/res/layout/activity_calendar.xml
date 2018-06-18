@@ -72,9 +72,282 @@
 
     </android.support.v7.widget.Toolbar>
 
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="472dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/thisWeek"
+        app:layout_constraintVertical_bias="0.45"
+        tools:layout_editor_absoluteX="0dp">
+
+        <TextView
+            android:id="@+id/MON"
+            android:layout_width="52dp"
+            android:layout_height="37dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_corner"
+            android:padding="5dp"
+            android:text="MON"
+            android:textAlignment="center"
+            android:textColor="@color/color_white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.13" />
+
+        <TextView
+            android:id="@+id/TUE"
+            android:layout_width="52dp"
+            android:layout_height="37dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_corner"
+            android:padding="5dp"
+            android:text="TUE"
+            android:textAlignment="center"
+            android:textColor="@color/color_white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.26" />
+
+        <TextView
+            android:id="@+id/WED"
+            android:layout_width="52dp"
+            android:layout_height="37dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_corner"
+            android:padding="5dp"
+            android:text="WED"
+            android:textAlignment="center"
+            android:textColor="@color/color_white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.39" />
+
+        <TextView
+            android:id="@+id/THU"
+            android:layout_width="52dp"
+            android:layout_height="37dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_corner"
+            android:padding="5dp"
+            android:text="THU"
+            android:textAlignment="center"
+            android:textColor="@color/color_white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.52" />
+
+        <TextView
+            android:id="@+id/FRI"
+            android:layout_width="52dp"
+            android:layout_height="37dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_corner"
+            android:padding="5dp"
+            android:text="FRI"
+            android:textAlignment="center"
+            android:textColor="@color/color_white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.651" />
+
+        <TextView
+            android:id="@+id/SAT"
+            android:layout_width="52dp"
+            android:layout_height="37dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="292dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_corner"
+            android:padding="5dp"
+            android:text="SAT"
+            android:textAlignment="center"
+            android:textColor="@color/color_white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.78" />
+
+        <TextView
+            android:id="@+id/SUN"
+            android:layout_width="52dp"
+            android:layout_height="37dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_corner"
+            android:padding="5dp"
+            android:text="SUN"
+            android:textAlignment="center"
+            android:textColor="@color/color_white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.90999997" />
+
+        <Spinner
+            android:id="@+id/spinnerMON"
+            android:layout_width="230dp"
+            android:layout_height="37dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/cardview_dark_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.95"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.13" />
+
+        <Spinner
+            android:id="@+id/spinnerTUE"
+            android:layout_width="230dp"
+            android:layout_height="37dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/cardview_dark_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.95"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.26" />
+
+        <Spinner
+            android:id="@+id/spinnerWED"
+            android:layout_width="230dp"
+            android:layout_height="37dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/cardview_dark_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.95"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.39" />
+
+        <Spinner
+            android:id="@+id/spinnerTHU"
+            android:layout_width="230dp"
+            android:layout_height="37dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/cardview_dark_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.95"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.52" />
+
+        <Spinner
+            android:id="@+id/spinnerFRI"
+            android:layout_width="230dp"
+            android:layout_height="37dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/cardview_dark_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.95"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.65" />
+
+        <Spinner
+            android:id="@+id/spinnerSAT"
+            android:layout_width="230dp"
+            android:layout_height="37dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/cardview_dark_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.95"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.78" />
+
+        <Spinner
+            android:id="@+id/spinnerSUN"
+            android:layout_width="230dp"
+            android:layout_height="37dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/cardview_dark_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.95"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.90999997" />
+
+
+
+    </android.support.constraint.ConstraintLayout>
+
     <!--Calendar-->
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/thisWeek"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -89,8 +362,8 @@
 
 
 
-
     <!--Bottom Navigation -->
+
     <LinearLayout
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
