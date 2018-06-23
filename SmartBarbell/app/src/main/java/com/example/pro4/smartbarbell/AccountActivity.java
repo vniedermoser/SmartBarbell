@@ -15,7 +15,9 @@ import android.widget.Toast;
 
 public class AccountActivity extends AppCompatActivity {
 
+    Button gender_m;
     Button gender_w;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,11 +73,20 @@ public class AccountActivity extends AppCompatActivity {
         //----main---
         //-----------------
 
-        gender_w = findViewById(R.id.gender_woman);
+        gender_m = findViewById(R.id.gender_man) ;
+        gender_w = findViewById(R.id.gender_woman) ;
+
         gender_w.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
-                // Drawable mDrawable = ContextCompat.getDrawable(AccountActivity.this, R.drawable.ic_w);
-               // mDrawable.setColorFilter(new PorterDuffColorFilter(0xffff00,PorterDuff.Mode.MULTIPLY));
+                gender_w.setBackgroundTintList(ContextCompat.getColorStateList(AccountActivity.this, R.color.color_main));
+                gender_m.setBackgroundTintList(ContextCompat.getColorStateList(AccountActivity.this, R.color.color_white));
+            }
+        });
+
+        gender_m.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                gender_w.setBackgroundTintList(ContextCompat.getColorStateList(AccountActivity.this, R.color.color_white));
+                gender_m.setBackgroundTintList(ContextCompat.getColorStateList(AccountActivity.this, R.color.color_main));
             }
         });
 
