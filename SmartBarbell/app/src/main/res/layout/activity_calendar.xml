@@ -224,7 +224,8 @@
             app:layout_constraintHorizontal_bias="0.1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.90999997" />
+            app:layout_constraintVertical_bias="0.90999997"
+            />
 
         <Spinner
             android:id="@+id/spinnerMON"
@@ -234,13 +235,18 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:background="@color/cardview_dark_background"
+            android:background="#2b2b2b"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.95"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.13" />
+            app:layout_constraintVertical_bias="0.13"
+            android:popupBackground="#2b2b2b"
+            android:paddingBottom="5dp"
+            android:paddingLeft="75dp"
+            android:paddingTop="5dp"
+            android:textColor="#ffff"/>/>
 
         <Spinner
             android:id="@+id/spinnerTUE"
@@ -250,13 +256,18 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:background="@color/cardview_dark_background"
+            android:background="#2b2b2b"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.95"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.26" />
+            app:layout_constraintVertical_bias="0.26"
+            android:popupBackground="#2b2b2b"
+            android:paddingBottom="5dp"
+            android:paddingLeft="75dp"
+            android:paddingTop="5dp"
+            android:textColor="#ffff"/>/>
 
         <Spinner
             android:id="@+id/spinnerWED"
@@ -266,13 +277,18 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:background="@color/cardview_dark_background"
+            android:background="#2b2b2b"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.95"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.39" />
+            app:layout_constraintVertical_bias="0.39"
+            android:popupBackground="#2b2b2b"
+            android:paddingBottom="5dp"
+            android:paddingLeft="75dp"
+            android:paddingTop="5dp"
+            android:textColor="#ffff"/>/>
 
         <Spinner
             android:id="@+id/spinnerTHU"
@@ -282,13 +298,18 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:background="@color/cardview_dark_background"
+            android:background="#2b2b2b"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.95"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.52" />
+            app:layout_constraintVertical_bias="0.52"
+            android:popupBackground="#2b2b2b"
+            android:paddingBottom="5dp"
+            android:paddingLeft="75dp"
+            android:paddingTop="5dp"
+            android:textColor="#ffff"/>/>
 
         <Spinner
             android:id="@+id/spinnerFRI"
@@ -298,13 +319,18 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:background="@color/cardview_dark_background"
+            android:background="#2b2b2b"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.95"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.65" />
+            app:layout_constraintVertical_bias="0.65"
+            android:popupBackground="#2b2b2b"
+            android:paddingBottom="5dp"
+            android:paddingLeft="75dp"
+            android:paddingTop="5dp"
+            android:textColor="#ffff"/>/>
 
         <Spinner
             android:id="@+id/spinnerSAT"
@@ -314,13 +340,18 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:background="@color/cardview_dark_background"
+            android:background="#2b2b2b"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.95"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.78" />
+            app:layout_constraintVertical_bias="0.78"
+            android:popupBackground="#2b2b2b"
+            android:paddingBottom="5dp"
+            android:paddingLeft="75dp"
+            android:paddingTop="5dp"
+            android:textColor="#ffff"/>
 
         <Spinner
             android:id="@+id/spinnerSUN"
@@ -330,13 +361,20 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:background="@color/cardview_dark_background"
+            android:background="#2b2b2b"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.95"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.90999997" />
+            app:layout_constraintVertical_bias="0.90999997"
+            android:popupBackground="#2b2b2b"
+            android:paddingBottom="5dp"
+            android:paddingLeft="75dp"
+            android:paddingTop="5dp"
+            android:textColor="#ffff"
+
+            />
 
 
 

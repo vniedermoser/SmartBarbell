@@ -38,6 +38,11 @@ public class CalendarActivity extends AppCompatActivity  {
 //welches item wird agezeigt
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
 
+
+
+        //ArrayAdapter<string> dataAdapter= new ArrayAdapter<string>(this, R.layout.spinner_item, list);
+        //sun.setAdapter(dataAdapter);</string></string></string></string>
+
         mon.setAdapter(adapter);
         tue.setAdapter(adapter);
         wed.setAdapter(adapter);
