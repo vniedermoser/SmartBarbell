@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Handler;
 import android.os.SystemClock;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.JsonWriter;
@@ -169,6 +170,10 @@ public class ExerciseActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                start.setImageTintList(ContextCompat.getColorStateList(ExerciseActivity.this, R.color.color_main));
+                pause.setImageTintList(ContextCompat.getColorStateList(ExerciseActivity.this, R.color.color_white));
+                reset.setImageTintList(ContextCompat.getColorStateList(ExerciseActivity.this, R.color.color_white));
+
                 StartTime = SystemClock.uptimeMillis();
                 handler.postDelayed(runnable, 0);
                 reset.setEnabled(false);
@@ -181,6 +186,10 @@ public class ExerciseActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                start.setImageTintList(ContextCompat.getColorStateList(ExerciseActivity.this, R.color.color_white));
+                pause.setImageTintList(ContextCompat.getColorStateList(ExerciseActivity.this, R.color.color_main));
+                reset.setImageTintList(ContextCompat.getColorStateList(ExerciseActivity.this, R.color.color_white));
+
                 TimeBuff += MillisecondTime;
                 handler.removeCallbacks(runnable);
                 reset.setEnabled(true);
@@ -192,6 +201,11 @@ public class ExerciseActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                start.setImageTintList(ContextCompat.getColorStateList(ExerciseActivity.this, R.color.color_white));
+                pause.setImageTintList(ContextCompat.getColorStateList(ExerciseActivity.this, R.color.color_white));
+                reset.setImageTintList(ContextCompat.getColorStateList(ExerciseActivity.this, R.color.color_white));
+
+
                 MillisecondTime = 0L ;
                 StartTime = 0L ;
                 TimeBuff = 0L ;
@@ -201,6 +215,7 @@ public class ExerciseActivity extends AppCompatActivity {
                 Centisecond = 0 ;
 
                 textView.setText("00:00:00");
+
             }
         });
     }
