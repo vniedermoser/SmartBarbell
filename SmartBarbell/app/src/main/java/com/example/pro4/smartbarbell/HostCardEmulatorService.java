@@ -1,10 +1,11 @@
 package com.example.pro4.smartbarbell;
 
+import android.content.Intent;
 import android.nfc.cardemulation.HostApduService;
 import android.os.Bundle;
+import android.os.Handler;
+import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
-import android.widget.Toast;
-import android.content.Intent;
 
 import java.util.Arrays;
 
@@ -29,6 +30,7 @@ public class HostCardEmulatorService extends HostApduService {
             if (Arrays.equals(AID_SELECT_APDU, apdu)) {
                 inboundApduDescription = "Application selected";
                 Log.i("HCEDEMO", inboundApduDescription);
+                sendMessage(0);
                 byte[] answer = new byte[2];
                 answer[0] = (byte) 0x90;
                 answer[1] = (byte) 0x00;
@@ -49,7 +51,8 @@ public class HostCardEmulatorService extends HostApduService {
 
             } else if (logedin(apdu)) {
                 Log.i("HCEDEMO", "Loged IN !");
-                Toast.makeText(this, "Loged IN!", Toast.LENGTH_LONG).show();
+                //Toast.makeText(this, "Loged IN!", Toast.LENGTH_LONG).show();
+                sendMessage(1);
                 byte[] answer = new byte[2];
                 answer[0] = (byte) 0x90;
                 answer[1] = (byte) 0x00;
@@ -57,7 +60,8 @@ public class HostCardEmulatorService extends HostApduService {
                 return responseApdu;
             } else if (logedout(apdu)) {
                 Log.i("HCEDEMO", "Loged OUT !");
-                Toast.makeText(this, "Loged OUT!", Toast.LENGTH_LONG).show();
+                //Toast.makeText(this, "Loged OUT!", Toast.LENGTH_LONG).show();
+                sendMessage(2);
                 byte[] answer = new byte[2];
                 answer[0] = (byte) 0x90;
                 answer[1] = (byte) 0x00;
@@ -67,7 +71,8 @@ public class HostCardEmulatorService extends HostApduService {
             } else {
                 inboundApduDescription = "Unknown command";
                 Log.i("HCEDEMO", inboundApduDescription);
-                Toast.makeText(this, "Error -.- !", Toast.LENGTH_LONG).show();
+                //Toast.makeText(this, "Error -.- !", Toast.LENGTH_LONG).show();
+                sendMessage(3);
                 byte[] answer = new byte[2];
                 answer[0] = (byte) 0x6F;
                 answer[1] = (byte) 0x00;
@@ -77,7 +82,8 @@ public class HostCardEmulatorService extends HostApduService {
         }else{
             inboundApduDescription = "no nfc moder";
             Log.i("HCEDEMO", inboundApduDescription);
-            Toast.makeText(this, "not in nfc mode!", Toast.LENGTH_LONG).show();
+            //Toast.makeText(this, "not in nfc mode!", Toast.LENGTH_LONG).show();
+            sendMessage(3);
             byte[] answer = new byte[2];
             answer[0] = (byte) 0x6F;
             answer[1] = (byte) 0x00;
@@ -119,7 +125,28 @@ public class HostCardEmulatorService extends HostApduService {
     {
         flag=intent.getBooleanExtra("flag",false);
         int a=1;
-        Toast.makeText(this, "command.. "+flag, Toast.LENGTH_SHORT).show();
+      //  Toast.makeText(this, "command.. "+flag, Toast.LENGTH_SHORT).show();
+
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            public void run() {
+                sendMessage(0);
+            }
+        }, 2000);
+        handler.postDelayed(new Runnable() {
+            public void run() {
+                sendMessage(1);
+            }
+        }, 4000);
         return START_STICKY;
+    }
+    private void sendMessage(int Log) {
+        // 0: Connecting
+        // 1: LogedIn
+        // 2: Logedout
+        // 3: Error
+        Intent intent = new Intent("my-integer");
+        intent.putExtra("message", Log);
+        LocalBroadcastManager.getInstance(this).sendBroadcast(intent);
     }
 }
