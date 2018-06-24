@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.SystemClock;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
@@ -110,6 +111,12 @@ public class ExerciseActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startTime = SystemClock.uptimeMillis();
+
+                start.setImageTintList(ContextCompat.getColorStateList(ExerciseActivity.this, R.color.color_main));
+                pause.setImageTintList(ContextCompat.getColorStateList(ExerciseActivity.this, R.color.color_white));
+                reset.setImageTintList(ContextCompat.getColorStateList(ExerciseActivity.this, R.color.color_white));
+
+                startTime = SystemClock.uptimeMillis();
                 handler.postDelayed(runnable, 0);
                 reset.setEnabled(false);
             }
@@ -118,6 +125,12 @@ public class ExerciseActivity extends AppCompatActivity {
         pause.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                timeBuff += millisecondTime;
+
+                start.setImageTintList(ContextCompat.getColorStateList(ExerciseActivity.this, R.color.color_white));
+                pause.setImageTintList(ContextCompat.getColorStateList(ExerciseActivity.this, R.color.color_main));
+                reset.setImageTintList(ContextCompat.getColorStateList(ExerciseActivity.this, R.color.color_white));
+
                 timeBuff += millisecondTime;
                 handler.removeCallbacks(runnable);
                 reset.setEnabled(true);
@@ -135,7 +148,21 @@ public class ExerciseActivity extends AppCompatActivity {
                 minutes = 0;
                 centiseconds = 0;
 
+                start.setImageTintList(ContextCompat.getColorStateList(ExerciseActivity.this, R.color.color_white));
+                pause.setImageTintList(ContextCompat.getColorStateList(ExerciseActivity.this, R.color.color_white));
+                reset.setImageTintList(ContextCompat.getColorStateList(ExerciseActivity.this, R.color.color_white));
+
+
+                millisecondTime = 0L ;
+                startTime = 0L ;
+                timeBuff = 0L ;
+                updateTime = 0L ;
+                seconds = 0 ;
+                minutes = 0 ;
+                centiseconds = 0 ;
+
                 textView.setText("00:00:00");
+
             }
         });
     }

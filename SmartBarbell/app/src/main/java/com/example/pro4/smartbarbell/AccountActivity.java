@@ -1,13 +1,17 @@
 package com.example.pro4.smartbarbell;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
 public class AccountActivity extends AppCompatActivity {
+
+    Button gender_m;
+    Button gender_w;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +62,34 @@ public class AccountActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
+        //-----------------
+        //----main---
+        //-----------------
+
+        gender_m = findViewById(R.id.gender_man) ;
+        gender_w = findViewById(R.id.gender_woman) ;
+
+        gender_w.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                gender_w.setBackgroundTintList(ContextCompat.getColorStateList(AccountActivity.this, R.color.color_main));
+                gender_m.setBackgroundTintList(ContextCompat.getColorStateList(AccountActivity.this, R.color.color_white));
+            }
+        });
+
+        gender_m.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                gender_w.setBackgroundTintList(ContextCompat.getColorStateList(AccountActivity.this, R.color.color_white));
+                gender_m.setBackgroundTintList(ContextCompat.getColorStateList(AccountActivity.this, R.color.color_main));
+            }
+        });
+
+        Button r = findViewById(R.id.color1);
+        Button g = findViewById(R.id.color2);
+        Button b = findViewById(R.id.color3);
+
+    
     }
 
 }

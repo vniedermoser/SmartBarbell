@@ -9,7 +9,10 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -24,18 +27,10 @@ public class SettingActivity extends AppCompatActivity {
 
         navigation();
 
-        ArrayList<Object> itemList = new ArrayList<>();
-        itemList.add("delete Workout & Exercise data");
-
-        ArrayAdapter<Object> adapter = new ArrayAdapter<>(this, R.layout.list_item, R.id.listItem, itemList);
-
-        ListView listView = findViewById(R.id.settingList);
-        listView.setAdapter(adapter);
-
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        TextView textView = findViewById(R.id.deleteData);
+        textView.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                // Toast.makeText(SettingActivity.this, "List item was clicked at " + position, Toast.LENGTH_SHORT).show();
+            public void onClick(View v) {
                 DataJSONActivity.deleteJSONs(SettingActivity.this);
             }
         });

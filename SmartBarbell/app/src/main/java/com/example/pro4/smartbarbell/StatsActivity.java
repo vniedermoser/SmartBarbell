@@ -1,6 +1,8 @@
 package com.example.pro4.smartbarbell;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.Paint;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,45 +13,81 @@ import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
+import com.jjoe64.graphview.GraphView;
+import com.jjoe64.graphview.series.DataPoint;
+import com.jjoe64.graphview.series.LineGraphSeries;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class StatsActivity extends AppCompatActivity {
 
-    BarChart barChart;
 
+    LineGraphSeries<DataPoint> series;
+    LineGraphSeries<DataPoint> series2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stats);
 
+        double x;
+        double y;
+
+        x = 0;
+
+
+        GraphView graph1 = (GraphView) findViewById(R.id.graph1);
+        GraphView graph2 = (GraphView) findViewById(R.id.graph2);
+
+        series = new LineGraphSeries<DataPoint>();
+        for(int i = 0; i < 260; i++){
+            x = x + 0.1;
+            y = Math.sin(x);
+            series.appendData(new DataPoint(x,y),true,260);
+        }
+
+        LineGraphSeries<DataPoint> series2 = new LineGraphSeries<>(new DataPoint[]{
+                new DataPoint(0, 2),
+                new DataPoint(1, 6),
+                new DataPoint(2, 4),
+                new DataPoint(3, 3),
+                new DataPoint(4, 7),
+                new DataPoint(5, 5),
+                new DataPoint(6, 1),
+                new DataPoint(7, 4),
+                new DataPoint(8, 6),
+                new DataPoint(9, 7),
+                new DataPoint(10, 3)
+        });
 
 
 
-        barChart = findViewById(R.id.bargraph);
+        graph1.addSeries(series);
+        graph2.addSeries(series2);
+        series.setDrawBackground(false);
+        series.setColor(R.color.color_r);
+        series.setThickness(7);
+        series.setColor(Color.WHITE);
+        series.setAnimated(true);
+        series.setDataPointsRadius(10);
 
-        ArrayList<BarEntry> barEntries = new ArrayList<>();
-        barEntries.add(new BarEntry(0, 0));
-        barEntries.add(new BarEntry(1, 1));
-        barEntries.add(new BarEntry(2, 2));
-        barEntries.add(new BarEntry(3, 3));
-        barEntries.add(new BarEntry(4, 4));
-        barEntries.add(new BarEntry(5, 5));
 
-        BarDataSet barDataSet = new BarDataSet(barEntries,"Dates");
+        series2.setDrawBackground(false);
+        series2.setColor(R.color.color_r);
+        series2.setThickness(7);
+        series2.setColor(Color.WHITE);
+        series2.setAnimated(true);
+        series2.setDataPointsRadius(10);
 
-        ArrayList<String> theDates = new ArrayList<>();
-        theDates.add("MON");
-        theDates.add("TUE");
-        theDates.add("WED");
-        theDates.add("THU");
-        theDates.add("FRI");
-        theDates.add("SAT");
-        theDates.add("SUN");
 
-        BarData theData = new BarData(theDates, barDataSet);
-        barChart.setData(theData);
+// styling series
+        graph1.setBackgroundColor(getResources().getColor(R.color.color_darkGrey));
+        graph2.setBackgroundColor(getResources().getColor(R.color.color_darkGrey));
+
+
+
+
+
 
 
 
