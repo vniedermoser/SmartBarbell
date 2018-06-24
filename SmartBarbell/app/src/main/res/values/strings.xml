@@ -5,6 +5,7 @@
     <string name="title_activity_account">Account</string>
     <string name="title_activity_calendar">Calendar</string>
     <string name="title_activity_exercise">Exercise</string>
+    <string name="title_activity_exerciseList">Exercise List</string>
     <string name="title_activity_home">Home</string>
     <string name="title_activity_login">Login</string>
     <string name="title_activity_nfc">NFC</string>
@@ -12,8 +13,8 @@
     <string name="title_activity_settings">Settings</string>
     <string name="title_activity_stats">Stats</string>
     <string name="title_activity_timer">Timer</string>
-    <string name="title_activity_workout">Workouts</string>
-    <string name="title_activity_exerciseList">WorkoutName1</string>
+    <string name="title_activity_workouts">Workouts</string>
+    <string name="title_activity_workout">Workout</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--
-Items in the Workout List.
+Items in the List.
 -->
 
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -11,41 +11,25 @@ Items in the Workout List.
     android:layout_height="match_parent"
     tools:layout_editor_absoluteY="25dp">
 
-    <!--
-    <TextView
-        android:id="@+id/txtWorkouts"
-        android:layout_width="0dp"
-        android:layout_height="40dp"
-        android:layout_marginBottom="16dp"
-        android:layout_marginTop="16dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:gravity="center"
-        android:textColor="@color/color_white"
-        android:background="@drawable/rounded_corner"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
--->
     <Button
-        android:id="@+id/WorkoutButton"
+        android:id="@+id/listItem"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:textSize="20sp"
-        android:gravity="center"
-        android:textColor="@color/color_white"
-        android:textAllCaps="false"
-        android:background="@drawable/rounded_corner"
         android:layout_marginBottom="16dp"
         android:layout_marginTop="16dp"
-        android:onClick="clickMe"
+        android:background="@drawable/rounded_corner"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:textColor="@color/color_white"
+        android:textSize="20sp"
+
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 
 </android.support.constraint.ConstraintLayout>

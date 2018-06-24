@@ -59,7 +59,7 @@
             android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".WorkoutActivity"
-            android:label="@string/title_activity_workout"
+            android:label="@string/title_activity_workouts"
             android:theme="@style/AppTheme"
             android:windowSoftInputMode="adjustPan" />
         <activity
@@ -82,6 +82,7 @@
             android:label="@string/title_activity_settings"
             android:theme="@style/AppTheme"
             android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".DataJSONActivity" />
     </application>
 
 </manifest>

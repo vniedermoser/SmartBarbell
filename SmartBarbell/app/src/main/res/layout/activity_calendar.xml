@@ -35,7 +35,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/workout_name"
                 android:layout_width="135dp"
                 android:layout_height="36dp"
                 android:layout_gravity="center_horizontal"

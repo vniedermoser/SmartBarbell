@@ -13,7 +13,7 @@ You have 3 entries, Date, Weight and Reps
     tools:layout_editor_absoluteY="25dp">
 
     <TextView
-        android:id="@+id/txtResults"
+        android:id="@+id/resultItem"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"

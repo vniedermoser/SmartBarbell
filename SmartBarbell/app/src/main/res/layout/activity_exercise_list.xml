@@ -37,14 +37,14 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/exercise_list_workout_name"
                 android:layout_width="0dp"
                 android:layout_height="36dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="4dp"
-                android:text="@string/title_activity_exerciseList"
+                android:text="@string/title_activity_workout"
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textColor="@color/color_white"
@@ -88,13 +88,13 @@
         android:layout_marginEnd="32dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="24dp"
-        app:layout_constraintBottom_toTopOf="@+id/addWorkout"
+        app:layout_constraintBottom_toTopOf="@+id/addExercise"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
     <Button
-        android:id="@+id/addWorkout"
+        android:id="@+id/addExercise"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -106,11 +106,11 @@
         android:textColor="@color/color_white"
         app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/workoutName"
+        app:layout_constraintStart_toEndOf="@+id/exerciseName"
         app:layout_constraintTop_toBottomOf="@+id/yourWorkouts" />
 
     <EditText
-        android:id="@+id/workoutName"
+        android:id="@+id/exerciseName"
         android:layout_width="286dp"
         android:layout_height="0dp"
         android:layout_marginBottom="8dp"
@@ -122,7 +122,7 @@
         android:textColor="@color/color_main"
         android:textColorHint="@color/color_main"
         app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
-        app:layout_constraintEnd_toStartOf="@+id/addWorkout"
+        app:layout_constraintEnd_toStartOf="@+id/addExercise"
         app:layout_constraintStart_toStartOf="parent" />
 
     <!--Bottom Navigation -->
