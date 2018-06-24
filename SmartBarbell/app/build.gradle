@@ -46,6 +46,7 @@ dependencies {
 
     // graph
     implementation 'com.github.PhilJay:MPAndroidChart:v2.2.4'
+    implementation 'com.jjoe64:graphview:4.2.2'
 
     // JSON
     implementation('com.googlecode.json-simple:json-simple:1.1.1') {
