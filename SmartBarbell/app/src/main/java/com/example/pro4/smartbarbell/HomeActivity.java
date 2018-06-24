@@ -114,17 +114,17 @@ public class HomeActivity extends AppCompatActivity {
                     break;
                 case 1:
                     handler.removeCallbacks(runnable);
-                    NfcText.setText("Loged In !");
+                    NfcText.setText("logged in !");
                     NfcText.setTextColor(Color.parseColor("#00ff00"));
                     break;
                 case 2:
                     handler.removeCallbacks(runnable);
-                    NfcText.setText("Loged Out !");
+                    NfcText.setText("logged out !");
                     NfcText.setTextColor(Color.parseColor("#ff0000"));
                     break;
                 case 3:
                     handler.removeCallbacks(runnable);
-                    NfcText.setText("Error !");
+                    NfcText.setText("error");
                     NfcText.setTextColor(Color.parseColor("#00ff00"));
                     break;
             }
